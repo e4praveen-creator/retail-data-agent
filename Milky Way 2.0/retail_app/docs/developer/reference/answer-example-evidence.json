@@ -1,0 +1,174 @@
+{
+  "generated_at": "2026-09-27T01:11:22.292022+00:00",
+  "method": "Direct deterministic scoped queries; no model response generated",
+  "samples": {
+    "Web": {
+      "name": "scoped_retail_query",
+      "rows": [
+        {
+          "period": "comparison",
+          "sales_cents": 146625779,
+          "units": 12071,
+          "orders": 7231
+        },
+        {
+          "period": "current",
+          "sales_cents": 152052853,
+          "units": 12222,
+          "orders": 7366
+        }
+      ],
+      "row_count": 2,
+      "truncated": false,
+      "sql": "SELECT CASE WHEN s.calendar_date BETWEEN ? AND ? THEN 'current' ELSE 'comparison' END AS period,\ncoalesce(sum(s.net_sales_cents),0) AS sales_cents,\ncoalesce(sum(s.quantity),0) AS units,\ncount(DISTINCT s.transaction_key) AS orders\nFROM v_sales_after_returns s\nJOIN v_product p ON s.sku_key=p.sku_key\nJOIN dim_channel ch ON s.channel_key=ch.channel_key\nJOIN dim_store st ON s.selling_store_key=st.store_key\nJOIN dim_store mt ON s.market_store_key=mt.store_key\nJOIN dim_customer cu ON s.customer_key=cu.customer_key\nJOIN dim_loyalty lo ON s.loyalty_key=lo.loyalty_key\nJOIN dim_promotion pr ON s.promotion_key=pr.promotion_key\nJOIN dim_fulfillment_method fm ON s.fulfillment_method_key=fm.fulfillment_method_key\nWHERE (s.calendar_date BETWEEN ? AND ? OR s.calendar_date BETWEEN ? AND ?) AND (ch.channel_name) = ? AND (p.division_name) = ?\nGROUP BY 1\nORDER BY 1",
+      "parameters": [
+        "2025-07-01",
+        "2025-07-31",
+        "2025-07-01",
+        "2025-07-31",
+        "2024-07-01",
+        "2024-07-31",
+        "Web",
+        "Footwear"
+      ],
+      "scope": {
+        "dates": {
+          "start": "2025-07-01",
+          "end": "2025-07-31",
+          "compare_start": "2024-07-01",
+          "compare_end": "2024-07-31"
+        },
+        "metric": "sales_cents",
+        "return_basis": "before_returns",
+        "filters": [
+          {
+            "field": "channel_name",
+            "op": "eq",
+            "values": [
+              "Web"
+            ]
+          },
+          {
+            "field": "division_name",
+            "op": "eq",
+            "values": [
+              "Footwear"
+            ]
+          }
+        ],
+        "dimensions": []
+      },
+      "scope_fingerprint": "31ff63d81a82199d3f6da800671c79c0c0f2c6d9d840505ddfc1aaa78f25fb15",
+      "dimensions": [],
+      "measures": [
+        "sales_cents",
+        "units",
+        "orders"
+      ],
+      "warnings": [
+        "Synthetic retail evidence is descriptive and does not establish causality.",
+        "Orders and identified buyers are distinct within each group; they may overlap across product or promotion groups.",
+        "Product/promotion filters select merchandise lines: AOV is selected merchandise per matching order."
+      ],
+      "basis": "Original sale date; before_returns; USD money stored as integer cents; tax and shipping excluded.",
+      "grain": "Original merchandise sales line; preaggregated linked returns; distinct matching orders and identified buyers.",
+      "limits": {
+        "max_rows": 500
+      },
+      "sources": [
+        "v_sales_after_returns",
+        "v_product",
+        "dim_channel",
+        "dim_store",
+        "dim_customer",
+        "dim_loyalty",
+        "dim_promotion",
+        "dim_fulfillment_method"
+      ]
+    },
+    "Mobile app": {
+      "name": "scoped_retail_query",
+      "rows": [
+        {
+          "period": "comparison",
+          "sales_cents": 76112442,
+          "units": 6308,
+          "orders": 3711
+        },
+        {
+          "period": "current",
+          "sales_cents": 79488977,
+          "units": 6423,
+          "orders": 3764
+        }
+      ],
+      "row_count": 2,
+      "truncated": false,
+      "sql": "SELECT CASE WHEN s.calendar_date BETWEEN ? AND ? THEN 'current' ELSE 'comparison' END AS period,\ncoalesce(sum(s.net_sales_cents),0) AS sales_cents,\ncoalesce(sum(s.quantity),0) AS units,\ncount(DISTINCT s.transaction_key) AS orders\nFROM v_sales_after_returns s\nJOIN v_product p ON s.sku_key=p.sku_key\nJOIN dim_channel ch ON s.channel_key=ch.channel_key\nJOIN dim_store st ON s.selling_store_key=st.store_key\nJOIN dim_store mt ON s.market_store_key=mt.store_key\nJOIN dim_customer cu ON s.customer_key=cu.customer_key\nJOIN dim_loyalty lo ON s.loyalty_key=lo.loyalty_key\nJOIN dim_promotion pr ON s.promotion_key=pr.promotion_key\nJOIN dim_fulfillment_method fm ON s.fulfillment_method_key=fm.fulfillment_method_key\nWHERE (s.calendar_date BETWEEN ? AND ? OR s.calendar_date BETWEEN ? AND ?) AND (ch.channel_name) = ? AND (p.division_name) = ?\nGROUP BY 1\nORDER BY 1",
+      "parameters": [
+        "2025-07-01",
+        "2025-07-31",
+        "2025-07-01",
+        "2025-07-31",
+        "2024-07-01",
+        "2024-07-31",
+        "Mobile app",
+        "Footwear"
+      ],
+      "scope": {
+        "dates": {
+          "start": "2025-07-01",
+          "end": "2025-07-31",
+          "compare_start": "2024-07-01",
+          "compare_end": "2024-07-31"
+        },
+        "metric": "sales_cents",
+        "return_basis": "before_returns",
+        "filters": [
+          {
+            "field": "channel_name",
+            "op": "eq",
+            "values": [
+              "Mobile app"
+            ]
+          },
+          {
+            "field": "division_name",
+            "op": "eq",
+            "values": [
+              "Footwear"
+            ]
+          }
+        ],
+        "dimensions": []
+      },
+      "scope_fingerprint": "99b5ebdd2407f94d4ece46777ead3e0023e8a40336cc9896db7700d53c8428cf",
+      "dimensions": [],
+      "measures": [
+        "sales_cents",
+        "units",
+        "orders"
+      ],
+      "warnings": [
+        "Synthetic retail evidence is descriptive and does not establish causality.",
+        "Orders and identified buyers are distinct within each group; they may overlap across product or promotion groups.",
+        "Product/promotion filters select merchandise lines: AOV is selected merchandise per matching order."
+      ],
+      "basis": "Original sale date; before_returns; USD money stored as integer cents; tax and shipping excluded.",
+      "grain": "Original merchandise sales line; preaggregated linked returns; distinct matching orders and identified buyers.",
+      "limits": {
+        "max_rows": 500
+      },
+      "sources": [
+        "v_sales_after_returns",
+        "v_product",
+        "dim_channel",
+        "dim_store",
+        "dim_customer",
+        "dim_loyalty",
+        "dim_promotion",
+        "dim_fulfillment_method"
+      ]
+    }
+  }
+}

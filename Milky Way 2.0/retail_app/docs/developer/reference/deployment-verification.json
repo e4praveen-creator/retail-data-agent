@@ -1,0 +1,37 @@
+{
+  "original_records_preserved": true,
+  "before": {
+    "conversations": 21,
+    "messages": 82,
+    "analyses": 41,
+    "memories": 0
+  },
+  "after": {
+    "conversations": 21,
+    "messages": 82,
+    "analyses": 41,
+    "memories": 0
+  },
+  "backup_integrity_verified": true,
+  "health": {
+    "status": "ready",
+    "agent_ready": true,
+    "mode": "local_single_user"
+  },
+  "workspace": {
+    "active_release": "release-baseline",
+    "counts": {
+      "knowledge": 26,
+      "ontology": 4,
+      "skill": 19,
+      "output_profile": 3,
+      "example": 0,
+      "evaluation_suite": 1
+    },
+    "draft_count": 0
+  },
+  "version": "2.1.0",
+  "guide_http_status": 200,
+  "guide_source_links": true,
+  "documented_source_http_status": 200
+}

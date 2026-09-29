@@ -1,0 +1,21 @@
+{
+  "name": "summit-field-retail-agent",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "build": "esbuild frontend/chat.jsx --bundle --minify --outfile=static/app.js",
+    "test:frontend": "esbuild tests/test_frontend.jsx --bundle --platform=node --format=esm --packages=external --outfile=tmp/test_frontend.mjs && node tmp/test_frontend.mjs && esbuild tests/test_playbook_visuals.jsx --bundle --platform=node --format=esm --packages=external --outfile=tmp/test_playbook_visuals.mjs && node tmp/test_playbook_visuals.mjs && esbuild tests/test_answer_report.jsx --bundle --platform=node --format=esm --packages=external --outfile=tmp/test_answer_report.mjs && node tmp/test_answer_report.mjs"
+  },
+  "dependencies": {
+    "lucide-react": "0.468.0",
+    "react": "19.1.1",
+    "react-dom": "19.1.1",
+    "react-markdown": "10.1.0",
+    "recharts": "2.15.4",
+    "remark-gfm": "4.0.1"
+  },
+  "devDependencies": {
+    "esbuild": "0.25.9",
+    "prettier": "3.6.2"
+  }
+}

@@ -1,0 +1,210 @@
+[
+  {
+    "path": "retail-data-analyst/SKILL.md",
+    "lines": 27,
+    "sha256": "8cdc99ee463afce1fddd2c6088d5030f602ad52f560881e3f4a48b1f3349be58",
+    "size": 3826,
+    "role": "domain_reference",
+    "aliases": []
+  },
+  {
+    "path": "retail-data-analyst/references/playbooks.md",
+    "lines": 451,
+    "sha256": "5e17d518b52c68da48347ed5e6a359a3fd68008de24bdb74616d71ba73fb25a7",
+    "size": 37347,
+    "role": "playbook",
+    "aliases": []
+  },
+  {
+    "path": "retail-data-analyst/references/question-router.md",
+    "lines": 54,
+    "sha256": "23133ba94e3a0307e63c19ba07d4e7931901a2e8ff6605895919a7737ddb25a2",
+    "size": 6293,
+    "role": "question_router",
+    "aliases": []
+  },
+  {
+    "path": "retail-data-analyst/references/visual-specs.md",
+    "lines": 94,
+    "sha256": "53756d7c783821d083934c1dfb030d016063186244869d4522bfcc3ee274f229",
+    "size": 13174,
+    "role": "visual_specification",
+    "aliases": []
+  },
+  {
+    "path": "retail-data-analyst/references/worked-examples.md",
+    "lines": 51,
+    "sha256": "250749c0a448e641d84d72caafdbcf3bf92a96784f705171c42fbef1c05bd5b8",
+    "size": 5504,
+    "role": "worked_example",
+    "aliases": []
+  },
+  {
+    "path": "retail_playbook_library.md",
+    "lines": 453,
+    "sha256": "602b91e1d1de64a2a067bf39e03c8ff4893cac784937e3565c11823f90150edd",
+    "size": 37814,
+    "role": "playbook",
+    "aliases": []
+  },
+  {
+    "path": "retail_data/docs/DATA_DICTIONARY.md",
+    "lines": 371,
+    "sha256": "0e2363bb2083c579d96d958e4288c413db8a0e687cc7b7029b9ea3a3ef01685e",
+    "size": 19467,
+    "role": "schema",
+    "aliases": []
+  },
+  {
+    "path": "retail_data/docs/DELIVERY_REPORT.md",
+    "lines": 55,
+    "sha256": "1330a9db82b71786adb81374ff2295e6be15025d6977157f12b6b999c4f2b834",
+    "size": 3298,
+    "role": "validation_record",
+    "aliases": []
+  },
+  {
+    "path": "retail_data/docs/METRICS.md",
+    "lines": 40,
+    "sha256": "9336a588518c3e1c9149d5414b257ee8f30f9c81aab506ee1c7d180f0b8aa447",
+    "size": 4690,
+    "role": "metric_contract",
+    "aliases": []
+  },
+  {
+    "path": "retail_data/docs/MODEL.md",
+    "lines": 110,
+    "sha256": "6cb56dc7f0fb43ac8e96c78ca15aa9e355568da47bb9adfcaf680f566fc0247c",
+    "size": 10040,
+    "role": "dataset_model",
+    "aliases": []
+  },
+  {
+    "path": "retail_data/docs/SOURCES.md",
+    "lines": 15,
+    "sha256": "c609d61b1fc69e27f9359146b53ce9748a010b5a58754ebb8dbed6c90a03e173",
+    "size": 2237,
+    "role": "domain_reference",
+    "aliases": []
+  },
+  {
+    "path": "retail_data/docs/catalog.json",
+    "lines": 1228,
+    "sha256": "ea251f5b23f096e6d78e38c2e3741fc73d4fd798ce404d0a1e261df66f9d9a84",
+    "size": 38082,
+    "role": "schema",
+    "aliases": []
+  },
+  {
+    "path": "retail_data/docs/full_validation_report.json",
+    "lines": 531,
+    "sha256": "351fce416198de18487eb4df2197cfcab902b9b83dfb6301ecaf18d949b13708",
+    "size": 11798,
+    "role": "validation_record",
+    "aliases": []
+  },
+  {
+    "path": "retail_data/docs/integration_report.json",
+    "lines": 74,
+    "sha256": "1ccf48b1f830933cf62f83206b3a98248d369afab7a7678dae19c4b1907cdec8",
+    "size": 2879,
+    "role": "validation_record",
+    "aliases": []
+  },
+  {
+    "path": "retail_data/docs/full_parquet_report.json",
+    "lines": 122,
+    "sha256": "a3b42dc3ba9fb0de9a6519fcf2a0ed5074310a91352fe6ba31c7e3e22003cdb9",
+    "size": 2253,
+    "role": "validation_record",
+    "aliases": []
+  },
+  {
+    "path": "retail_data/docs/full_api_report.json",
+    "lines": 31,
+    "sha256": "2571acc97096b939d95479d3fb1e0576675e341e379e26b6fd886fe2d2daef1e",
+    "size": 511,
+    "role": "validation_record",
+    "aliases": []
+  },
+  {
+    "path": "retail_app/knowledge/hypotheses.json",
+    "lines": 398,
+    "sha256": "b87dddeb6b1de8ef3bf900c36469f99518f9059a0c51b992aae478e2d631d345",
+    "size": 21078,
+    "role": "hypothesis_template",
+    "aliases": []
+  },
+  {
+    "path": "retail_data/sql/example_queries.sql",
+    "lines": 66,
+    "sha256": "3c9e6cb34f1fcbf1d29ab30066fd66d1f8b94c60bd20baaef6e8e58b3a6c5303",
+    "size": 3690,
+    "role": "implementation_reference",
+    "aliases": []
+  },
+  {
+    "path": "retail_data/sql/schema.sql",
+    "lines": 293,
+    "sha256": "76d8e55fd2855cdc45802701749e720efc33923a73d135f9ffa4dbceeca78e7e",
+    "size": 9524,
+    "role": "implementation_reference",
+    "aliases": []
+  },
+  {
+    "path": "retail_data/sql/views.sql",
+    "lines": 32,
+    "sha256": "1b5c3fb6eb7d6ae2f8a71b87b72cc4410eb3ee83f6686e2b43c068f2c57a547c",
+    "size": 2247,
+    "role": "implementation_reference",
+    "aliases": []
+  },
+  {
+    "path": "retail_data/src/generate.py",
+    "lines": 283,
+    "sha256": "1cba97dff5c73046e00eac35abf2d48800aab7fe0a00b2babd92515c74f5cb13",
+    "size": 26052,
+    "role": "implementation_reference",
+    "aliases": []
+  },
+  {
+    "path": "retail_data/src/catalog.py",
+    "lines": 113,
+    "sha256": "1b35d5d3b86ee7a64c142e2af485d47c87913fbd5c739940e111adcbefd97b40",
+    "size": 11322,
+    "role": "implementation_reference",
+    "aliases": []
+  },
+  {
+    "path": "retail_data/src/validate.py",
+    "lines": 64,
+    "sha256": "0ca63ad378ebf777a3c9f881459f7574b14a4ff31a0fd5070abe5ad17424ba90",
+    "size": 9541,
+    "role": "implementation_reference",
+    "aliases": []
+  },
+  {
+    "path": "retail_data/src/reports.py",
+    "lines": 40,
+    "sha256": "f7c2adc33ad13d5ddbe41c4ed112e7db1674e30714772878c4a3800a31091902",
+    "size": 2359,
+    "role": "implementation_reference",
+    "aliases": []
+  },
+  {
+    "path": "retail_app/docs/architecture-reference.txt",
+    "lines": 1106,
+    "sha256": "71551105e230996fadaf2393308e1d29de1c52b83ba588e64984075c47863ea4",
+    "size": 22428,
+    "role": "design_reference",
+    "aliases": []
+  },
+  {
+    "path": "retail_app/docs/MILKY_WAY_REFERENCE.md",
+    "lines": 27,
+    "sha256": "afc72ec6364b30634a03c64896d217365e558d666a9c812bf8066e60ddefa327",
+    "size": 3236,
+    "role": "design_reference",
+    "aliases": []
+  }
+]

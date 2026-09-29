@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "description": "Five reviewed retail regression scenarios. Golden queries use raw facts and normalized dimensions; expected values are never sent to the model. This small suite does not establish general answer accuracy.",
+  "ui_scope": {
+    "start": "2025-01-05",
+    "end": "2025-12-27",
+    "compare_start": "2024-01-07",
+    "compare_end": "2024-12-28"
+  },
+  "evidence_request": "Query the warehouse and return one total row of evidence for the requested measures, without a daily or monthly breakdown. Label monetary units as cents or USD in evidence column names and cite the evidence in your brief answer.",
+  "cases": [
+    {
+      "id": "base_total",
+      "question": "Across all channels and divisions, what were total merchandise net sales before returns and completed order count for the current UI period? Exclude tax and shipping.",
+      "golden_sql": "SELECT sum(net_sales_cents) AS sales_cents, count(*) AS orders FROM fact_transaction WHERE date_key BETWEEN 20250105 AND 20251227",
+      "metrics": {"sales_cents": "money_cents", "orders": "orders"},
+      "manual_review": ["Answer uses current UI dates, all-business scope and sales-before-returns basis.", "Headline values correspond to the cited result, including any displayed rounding."]
+    },
+    {
+      "id": "filtered_channel_division",
+      "question": "For Web purchases of Footwear only, what were total merchandise net sales before returns and sold units during the current UI period? Exclude tax and shipping, and retain both filters.",
+      "golden_sql": "SELECT sum(s.net_sales_cents) AS sales_cents, sum(s.quantity) AS units FROM fact_sales_line s JOIN fact_transaction h ON s.transaction_key=h.transaction_key JOIN dim_channel ch ON h.channel_key=ch.channel_key JOIN dim_sku sku ON s.sku_key=sku.sku_key JOIN dim_style st ON sku.style_key=st.style_key JOIN dim_category cat ON st.category_key=cat.category_key JOIN dim_department dep ON cat.department_key=dep.department_key JOIN dim_division div ON dep.division_key=div.division_key WHERE h.date_key BETWEEN 20250105 AND 20251227 AND ch.channel_name='Web' AND div.division_name='Footwear'",
+      "metrics": {"sales_cents": "money_cents", "units": "units"},
+      "manual_review": ["Both Web and Footwear filters remain in the query and answer.", "Sales and units use line grain, without header fan-out or all-business substitution."]
+    },
+    {
+      "id": "explicit_date_override",
+      "question": "Ignore the default UI period for this question: for March 1 through March 31, 2024 inclusive, give total merchandise net sales before returns and completed order count across all channels and divisions. Exclude tax and shipping.",
+      "golden_sql": "SELECT sum(net_sales_cents) AS sales_cents, count(*) AS orders FROM fact_transaction WHERE date_key BETWEEN 20240301 AND 20240331",
+      "metrics": {"sales_cents": "money_cents", "orders": "orders"},
+      "manual_review": ["The explicit March 2024 dates override the 2025 UI scope.", "The narrative does not describe the default UI period as the effective query period."]
+    },
+    {
+      "id": "followup_recent_correction",
+      "question": "Apply my latest correction in this conversation. What were total merchandise net sales before returns and sold units for that corrected slice? Exclude tax and shipping.",
+      "prior_messages": [
+        {"role": "user", "content": "Please look at Web Apparel purchases in January 2025."},
+        {"role": "assistant", "content": "We have discussed display preferences. No measured numerical findings are supplied in this fixture. "},
+        {"role": "user", "content": "Correction: use Mobile app purchases of Footwear from July 1 through July 31, 2025 inclusive instead. This replaces the earlier Web, Apparel and January filters."},
+        {"role": "assistant", "content": "Understood. I will use the corrected scope for your next analysis."}
+      ],
+      "prior_padding": {"message_index": 1, "repeat": 180},
+      "golden_sql": "SELECT sum(s.net_sales_cents) AS sales_cents, sum(s.quantity) AS units FROM fact_sales_line s JOIN fact_transaction h ON s.transaction_key=h.transaction_key JOIN dim_channel ch ON h.channel_key=ch.channel_key JOIN dim_sku sku ON s.sku_key=sku.sku_key JOIN dim_style st ON sku.style_key=st.style_key JOIN dim_category cat ON st.category_key=cat.category_key JOIN dim_department dep ON cat.department_key=dep.department_key JOIN dim_division div ON dep.division_key=div.division_key WHERE h.date_key BETWEEN 20250701 AND 20250731 AND ch.channel_name='Mobile app' AND div.division_name='Footwear'",
+      "metrics": {"sales_cents": "money_cents", "units": "units"},
+      "manual_review": ["Recent user correction survives the long older context.", "Answer uses Mobile app, Footwear and July 2025, without stale Web/Apparel/January filters.", "The constructed prior conversation is context, not previously measured evidence."]
+    },
+    {
+      "id": "causal_gap_abstention",
+      "question": "How much incremental merchandise revenue did loyalty membership cause in January 2025? Establish whether the available Summit Field data can identify this causal effect; do not replace causal lift with member-versus-nonmember differences. Cite the relevant metric/model documentation, and explain the evidence needed if this cannot be identified.",
+      "metrics": {},
+      "manual_review": ["Explicitly abstains from a numeric causal-effect estimate because membership is not randomized and no credible identification design is provided.", "Does not relabel descriptive member differences as incremental lift.", "Names an appropriate missing experiment/holdout or defensible quasi-experimental design and cites actual documentation.", "Any descriptive figures, if included, are measured and clearly separated from causal claims."]
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "entry": "app.js",
+  "initial_bytes": 886996,
+  "total_bytes": 953184,
+  "files": [
+    {
+      "path": "app.js",
+      "bytes": 372738,
+      "sha256": "25258e57f61f6f65d4a7596eaf686a6de581582f5266991c77cac54f17522eaa",
+      "initial": true
+    },
+    {
+      "path": "chunks/analysis-workspace-TCMQ3I4Z.js",
+      "bytes": 23666,
+      "sha256": "c027d93bf63ee3e1e4cf224030f888772505b32a77e445a4f5f3341fd5d05dac",
+      "initial": false
+    },
+    {
+      "path": "chunks/chunk-34BNRKEJ.js",
+      "bytes": 496289,
+      "sha256": "f8509c1b18f0b794b995f90e4389eebb424a5a175df5534db2e75eda23eeb552",
+      "initial": true
+    },
+    {
+      "path": "chunks/chunk-CK6IEZHO.js",
+      "bytes": 13170,
+      "sha256": "0ef703f360ce2bb3223cdfec12d3c0e256bb465c882013dee6e6041f7261081c",
+      "initial": true
+    },
+    {
+      "path": "chunks/chunk-JFRL4ASH.js",
+      "bytes": 4799,
+      "sha256": "5a3c718c3af2a627ee29caee05debe1c74cfa2aab93dd71a07b8e32744e0d401",
+      "initial": true
+    },
+    {
+      "path": "chunks/improve-workspace-ND5V2532.js",
+      "bytes": 42522,
+      "sha256": "5ef710081e67f18a9f1027427c1b0d5063870f9358bf70cfd1a2ee17e142f2b9",
+      "initial": false
+    }
+  ]
+}

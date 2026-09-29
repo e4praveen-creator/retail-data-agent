@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "check_count": 5,
+  "checks": [
+    {
+      "route": "/health",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "route": "/catalog",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "route": "/reports/monthly_sales",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "route": "/reports/division_sales",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "route": "/reports/channel_orders",
+      "status": 200,
+      "passed": true
+    }
+  ]
+}

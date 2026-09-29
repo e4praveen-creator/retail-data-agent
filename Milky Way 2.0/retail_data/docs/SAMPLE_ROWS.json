@@ -1,0 +1,669 @@
+{
+  "dim_date": [
+    {
+      "date_key": 20240101,
+      "calendar_date": "2024-01-01",
+      "day_index": 0,
+      "calendar_year": 2024,
+      "calendar_month": 1,
+      "day_of_month": 1,
+      "iso_day_of_week": 1,
+      "is_weekend": false,
+      "retail_year": 2023,
+      "retail_week": 49,
+      "retail_period": 12,
+      "retail_quarter": 4,
+      "seasonal_event": "Regular",
+      "demand_weight": 100
+    },
+    {
+      "date_key": 20240102,
+      "calendar_date": "2024-01-02",
+      "day_index": 1,
+      "calendar_year": 2024,
+      "calendar_month": 1,
+      "day_of_month": 2,
+      "iso_day_of_week": 2,
+      "is_weekend": false,
+      "retail_year": 2023,
+      "retail_week": 49,
+      "retail_period": 12,
+      "retail_quarter": 4,
+      "seasonal_event": "Regular",
+      "demand_weight": 100
+    },
+    {
+      "date_key": 20240103,
+      "calendar_date": "2024-01-03",
+      "day_index": 2,
+      "calendar_year": 2024,
+      "calendar_month": 1,
+      "day_of_month": 3,
+      "iso_day_of_week": 3,
+      "is_weekend": false,
+      "retail_year": 2023,
+      "retail_week": 49,
+      "retail_period": 12,
+      "retail_quarter": 4,
+      "seasonal_event": "Regular",
+      "demand_weight": 100
+    }
+  ],
+  "dim_time": [
+    {
+      "time_key": 0,
+      "hour_of_day": 0,
+      "minute_of_hour": 0,
+      "daypart": "Morning"
+    },
+    {
+      "time_key": 1,
+      "hour_of_day": 0,
+      "minute_of_hour": 1,
+      "daypart": "Morning"
+    },
+    {
+      "time_key": 2,
+      "hour_of_day": 0,
+      "minute_of_hour": 2,
+      "daypart": "Morning"
+    }
+  ],
+  "dim_channel": [
+    {
+      "channel_key": 0,
+      "channel_name": "Not applicable / all channels"
+    },
+    {
+      "channel_key": 1,
+      "channel_name": "Store POS"
+    },
+    {
+      "channel_key": 2,
+      "channel_name": "Web"
+    }
+  ],
+  "dim_fulfillment_method": [
+    {
+      "fulfillment_method_key": 1,
+      "fulfillment_method": "Carry out"
+    },
+    {
+      "fulfillment_method_key": 2,
+      "fulfillment_method": "Store pickup"
+    },
+    {
+      "fulfillment_method_key": 3,
+      "fulfillment_method": "Ship from distribution center"
+    }
+  ],
+  "dim_store": [
+    {
+      "store_key": 0,
+      "store_name": "Digital / no selling store",
+      "region": "Not applicable",
+      "store_format": "Digital",
+      "opened_date": "2019-01-01",
+      "selling_area_sqft": 0
+    },
+    {
+      "store_key": 1,
+      "store_name": "Summit Field Store 001",
+      "region": "Northeast",
+      "store_format": "Standard",
+      "opened_date": "2019-01-01",
+      "selling_area_sqft": 35000
+    },
+    {
+      "store_key": 2,
+      "store_name": "Summit Field Store 002",
+      "region": "South",
+      "store_format": "Standard",
+      "opened_date": "2019-01-01",
+      "selling_area_sqft": 40000
+    }
+  ],
+  "dim_location": [
+    {
+      "location_key": 1,
+      "store_key": 1,
+      "location_name": "Summit Field Store 001",
+      "location_type": "STORE"
+    },
+    {
+      "location_key": 2,
+      "store_key": 2,
+      "location_name": "Summit Field Store 002",
+      "location_type": "STORE"
+    },
+    {
+      "location_key": 3,
+      "store_key": 3,
+      "location_name": "Summit Field Store 003",
+      "location_type": "STORE"
+    }
+  ],
+  "dim_division": [
+    {
+      "division_key": 0,
+      "division_name": "Not applicable"
+    },
+    {
+      "division_key": 1,
+      "division_name": "Apparel"
+    },
+    {
+      "division_key": 2,
+      "division_name": "Footwear"
+    }
+  ],
+  "dim_department": [
+    {
+      "department_key": 1,
+      "division_key": 1,
+      "department_name": "Activewear"
+    },
+    {
+      "department_key": 2,
+      "division_key": 1,
+      "department_name": "Outerwear"
+    },
+    {
+      "department_key": 3,
+      "division_key": 2,
+      "department_name": "Athletic shoes"
+    }
+  ],
+  "dim_category": [
+    {
+      "category_key": 1,
+      "department_key": 1,
+      "category_name": "Training tops"
+    },
+    {
+      "category_key": 2,
+      "department_key": 1,
+      "category_name": "Training shorts"
+    },
+    {
+      "category_key": 3,
+      "department_key": 2,
+      "category_name": "Fleece"
+    }
+  ],
+  "dim_brand": [
+    {
+      "brand_key": 1,
+      "brand_name": "Cinder Peak",
+      "is_private_label": false
+    },
+    {
+      "brand_key": 2,
+      "brand_name": "Northline Sport",
+      "is_private_label": false
+    },
+    {
+      "brand_key": 3,
+      "brand_name": "Stridelark",
+      "is_private_label": false
+    }
+  ],
+  "dim_color": [
+    {
+      "color_key": 1,
+      "color_name": "Black"
+    },
+    {
+      "color_key": 2,
+      "color_name": "Navy"
+    },
+    {
+      "color_key": 3,
+      "color_name": "Red"
+    }
+  ],
+  "dim_size": [
+    {
+      "size_key": 1,
+      "size_system": "Apparel alpha",
+      "size_label": "XS",
+      "size_sort": 1
+    },
+    {
+      "size_key": 2,
+      "size_system": "Apparel alpha",
+      "size_label": "S",
+      "size_sort": 2
+    },
+    {
+      "size_key": 3,
+      "size_system": "Apparel alpha",
+      "size_label": "M",
+      "size_sort": 3
+    }
+  ],
+  "dim_style": [
+    {
+      "style_key": 1,
+      "category_key": 1,
+      "brand_key": 1,
+      "style_code": "SF-0001",
+      "style_name": "Synthetic Training tops model 1",
+      "fit_group": "Unisex",
+      "price_tier": "Value"
+    },
+    {
+      "style_key": 2,
+      "category_key": 1,
+      "brand_key": 10,
+      "style_code": "SF-0002",
+      "style_name": "Synthetic Training tops model 2",
+      "fit_group": "Unisex",
+      "price_tier": "Core"
+    },
+    {
+      "style_key": 3,
+      "category_key": 1,
+      "brand_key": 4,
+      "style_code": "SF-0003",
+      "style_name": "Synthetic Training tops model 3",
+      "fit_group": "Unisex",
+      "price_tier": "Premium"
+    }
+  ],
+  "dim_sku": [
+    {
+      "sku_key": 1,
+      "sku_code": "SKU-000001",
+      "style_key": 1,
+      "color_key": 1,
+      "size_key": 1,
+      "msrp_cents": 3599,
+      "unit_cost_cents": 1764,
+      "currency_code": "USD"
+    },
+    {
+      "sku_key": 2,
+      "sku_code": "SKU-000002",
+      "style_key": 1,
+      "color_key": 1,
+      "size_key": 2,
+      "msrp_cents": 3599,
+      "unit_cost_cents": 1764,
+      "currency_code": "USD"
+    },
+    {
+      "sku_key": 3,
+      "sku_code": "SKU-000003",
+      "style_key": 1,
+      "color_key": 1,
+      "size_key": 3,
+      "msrp_cents": 3599,
+      "unit_cost_cents": 1764,
+      "currency_code": "USD"
+    }
+  ],
+  "dim_customer": [
+    {
+      "customer_key": 0,
+      "customer_id": "ANONYMOUS",
+      "home_store_key": 0,
+      "age_band": "Unknown",
+      "customer_segment": "Unknown",
+      "registered_date": null
+    },
+    {
+      "customer_key": 1,
+      "customer_id": "CUST-0000001",
+      "home_store_key": 21,
+      "age_band": "18-24",
+      "customer_segment": "Enthusiast",
+      "registered_date": "2021-02-01"
+    },
+    {
+      "customer_key": 2,
+      "customer_id": "CUST-0000002",
+      "home_store_key": 42,
+      "age_band": "65+",
+      "customer_segment": "Active",
+      "registered_date": "2023-06-10"
+    }
+  ],
+  "dim_loyalty": [
+    {
+      "loyalty_key": 0,
+      "customer_key": 0,
+      "loyalty_id": "NO-LOYALTY",
+      "loyalty_tier": "None",
+      "enrollment_date": null
+    },
+    {
+      "loyalty_key": 1,
+      "customer_key": 1,
+      "loyalty_id": "LOY-0000001",
+      "loyalty_tier": "Base",
+      "enrollment_date": "2021-02-01"
+    },
+    {
+      "loyalty_key": 2,
+      "customer_key": 2,
+      "loyalty_id": "LOY-0000002",
+      "loyalty_tier": "Base",
+      "enrollment_date": "2023-06-10"
+    }
+  ],
+  "dim_promotion": [
+    {
+      "promotion_key": 0,
+      "promotion_name": "No promotion",
+      "division_key": 0,
+      "channel_key": 0,
+      "valid_from": "2024-01-01",
+      "valid_to": "2026-03-01",
+      "discount_pct": 0,
+      "loyalty_only": false
+    },
+    {
+      "promotion_key": 1,
+      "promotion_name": "Synthetic 2024-01 Apparel event",
+      "division_key": 1,
+      "channel_key": 2,
+      "valid_from": "2024-01-10",
+      "valid_to": "2024-01-24",
+      "discount_pct": 25,
+      "loyalty_only": true
+    },
+    {
+      "promotion_key": 2,
+      "promotion_name": "Synthetic 2024-01 Footwear event",
+      "division_key": 2,
+      "channel_key": 2,
+      "valid_from": "2024-01-10",
+      "valid_to": "2024-01-24",
+      "discount_pct": 25,
+      "loyalty_only": true
+    }
+  ],
+  "dim_return_reason": [
+    {
+      "return_reason_key": 1,
+      "return_reason": "Fit / size"
+    },
+    {
+      "return_reason_key": 2,
+      "return_reason": "Changed mind"
+    },
+    {
+      "return_reason_key": 3,
+      "return_reason": "Damaged"
+    }
+  ],
+  "fact_price_history": [
+    {
+      "price_key": 1,
+      "sku_key": 1,
+      "channel_key": 1,
+      "valid_from": "2024-01-01",
+      "valid_to": "2024-03-31",
+      "regular_unit_price_cents": 3599,
+      "markdown_pct": 0
+    },
+    {
+      "price_key": 2,
+      "sku_key": 1,
+      "channel_key": 1,
+      "valid_from": "2024-04-01",
+      "valid_to": "2024-06-30",
+      "regular_unit_price_cents": 3599,
+      "markdown_pct": 0
+    },
+    {
+      "price_key": 3,
+      "sku_key": 1,
+      "channel_key": 1,
+      "valid_from": "2024-07-01",
+      "valid_to": "2024-09-30",
+      "regular_unit_price_cents": 3599,
+      "markdown_pct": 0
+    }
+  ],
+  "fact_transaction": [
+    {
+      "transaction_key": 1,
+      "transaction_id": "TXN-0000000001",
+      "date_key": 20240203,
+      "time_key": 582,
+      "customer_key": 33917,
+      "loyalty_key": 33917,
+      "channel_key": 3,
+      "selling_store_key": 0,
+      "market_store_key": 5,
+      "fulfillment_method_key": 3,
+      "transaction_local_timestamp": "2024-02-03 09:42:00",
+      "line_count": 2,
+      "units": 2,
+      "gross_sales_cents": 28498,
+      "markdown_cents": 0,
+      "promotion_discount_cents": 0,
+      "net_sales_cents": 28498,
+      "tax_cents": 1995,
+      "cost_of_goods_cents": 14847,
+      "shipping_cents": 0,
+      "total_paid_cents": 30493,
+      "transaction_status": "COMPLETED",
+      "currency_code": "USD"
+    },
+    {
+      "transaction_key": 2,
+      "transaction_id": "TXN-0000000002",
+      "date_key": 20240225,
+      "time_key": 539,
+      "customer_key": 18114,
+      "loyalty_key": 18114,
+      "channel_key": 3,
+      "selling_store_key": 0,
+      "market_store_key": 40,
+      "fulfillment_method_key": 2,
+      "transaction_local_timestamp": "2024-02-25 08:59:00",
+      "line_count": 2,
+      "units": 2,
+      "gross_sales_cents": 22998,
+      "markdown_cents": 0,
+      "promotion_discount_cents": 0,
+      "net_sales_cents": 22998,
+      "tax_cents": 1610,
+      "cost_of_goods_cents": 12587,
+      "shipping_cents": 0,
+      "total_paid_cents": 24608,
+      "transaction_status": "COMPLETED",
+      "currency_code": "USD"
+    },
+    {
+      "transaction_key": 3,
+      "transaction_id": "TXN-0000000003",
+      "date_key": 20250717,
+      "time_key": 929,
+      "customer_key": 232976,
+      "loyalty_key": 232976,
+      "channel_key": 1,
+      "selling_store_key": 42,
+      "market_store_key": 42,
+      "fulfillment_method_key": 1,
+      "transaction_local_timestamp": "2025-07-17 15:29:00",
+      "line_count": 2,
+      "units": 2,
+      "gross_sales_cents": 33798,
+      "markdown_cents": 0,
+      "promotion_discount_cents": 8450,
+      "net_sales_cents": 25348,
+      "tax_cents": 1774,
+      "cost_of_goods_cents": 16508,
+      "shipping_cents": 0,
+      "total_paid_cents": 27122,
+      "transaction_status": "COMPLETED",
+      "currency_code": "USD"
+    }
+  ],
+  "fact_sales_line": [
+    {
+      "sales_line_key": 1,
+      "transaction_key": 1,
+      "line_number": 1,
+      "date_key": 20240203,
+      "sku_key": 333,
+      "price_key": 7985,
+      "promotion_key": 0,
+      "fulfillment_location_key": 61,
+      "quantity": 1,
+      "regular_unit_price_cents": 13499,
+      "selling_unit_price_cents": 13499,
+      "unit_cost_cents": 6392,
+      "gross_sales_cents": 13499,
+      "markdown_cents": 0,
+      "promotion_discount_cents": 0,
+      "net_sales_cents": 13499,
+      "tax_cents": 945,
+      "cost_of_goods_cents": 6392,
+      "promised_delivery_date": "2024-02-08"
+    },
+    {
+      "sales_line_key": 2,
+      "transaction_key": 1,
+      "line_number": 2,
+      "date_key": 20240203,
+      "sku_key": 1314,
+      "price_key": 31529,
+      "promotion_key": 0,
+      "fulfillment_location_key": 62,
+      "quantity": 1,
+      "regular_unit_price_cents": 14999,
+      "selling_unit_price_cents": 14999,
+      "unit_cost_cents": 8455,
+      "gross_sales_cents": 14999,
+      "markdown_cents": 0,
+      "promotion_discount_cents": 0,
+      "net_sales_cents": 14999,
+      "tax_cents": 1050,
+      "cost_of_goods_cents": 8455,
+      "promised_delivery_date": "2024-02-05"
+    },
+    {
+      "sales_line_key": 6,
+      "transaction_key": 2,
+      "line_number": 1,
+      "date_key": 20240225,
+      "sku_key": 1488,
+      "price_key": 35705,
+      "promotion_key": 0,
+      "fulfillment_location_key": 40,
+      "quantity": 1,
+      "regular_unit_price_cents": 10999,
+      "selling_unit_price_cents": 10999,
+      "unit_cost_cents": 5328,
+      "gross_sales_cents": 10999,
+      "markdown_cents": 0,
+      "promotion_discount_cents": 0,
+      "net_sales_cents": 10999,
+      "tax_cents": 770,
+      "cost_of_goods_cents": 5328,
+      "promised_delivery_date": "2024-02-25"
+    }
+  ],
+  "fact_return_line": [
+    {
+      "return_line_key": 26,
+      "sales_line_key": 26,
+      "transaction_key": 6,
+      "sku_key": 940,
+      "return_date_key": 20240813,
+      "return_reason_key": 4,
+      "return_location_key": 41,
+      "returned_quantity": 1,
+      "is_restockable": true,
+      "refund_net_cents": 7099,
+      "refund_tax_cents": 497,
+      "refund_total_cents": 7596,
+      "recovered_cost_cents": 3762
+    },
+    {
+      "return_line_key": 176,
+      "sales_line_key": 176,
+      "transaction_key": 36,
+      "sku_key": 130,
+      "return_date_key": 20240606,
+      "return_reason_key": 1,
+      "return_location_key": 50,
+      "returned_quantity": 1,
+      "is_restockable": true,
+      "refund_net_cents": 11599,
+      "refund_tax_cents": 812,
+      "refund_total_cents": 12411,
+      "recovered_cost_cents": 5220
+    },
+    {
+      "return_line_key": 206,
+      "sales_line_key": 206,
+      "transaction_key": 42,
+      "sku_key": 1576,
+      "return_date_key": 20250325,
+      "return_reason_key": 3,
+      "return_location_key": 24,
+      "returned_quantity": 1,
+      "is_restockable": false,
+      "refund_net_cents": 13399,
+      "refund_tax_cents": 938,
+      "refund_total_cents": 14337,
+      "recovered_cost_cents": 0
+    }
+  ],
+  "fact_inventory_weekly": [
+    {
+      "inventory_week_index": 0,
+      "location_key": 1,
+      "sku_key": 1,
+      "week_start_date_key": 20240101,
+      "week_end_date_key": 20240107,
+      "opening_on_hand_units": 10,
+      "receipt_units": 2,
+      "sold_units": 2,
+      "restocked_units": 0,
+      "shrink_units": 0,
+      "closing_on_hand_units": 10,
+      "reserved_units": 0,
+      "available_units": 10,
+      "in_transit_units": 8
+    },
+    {
+      "inventory_week_index": 0,
+      "location_key": 1,
+      "sku_key": 2,
+      "week_start_date_key": 20240101,
+      "week_end_date_key": 20240107,
+      "opening_on_hand_units": 8,
+      "receipt_units": 2,
+      "sold_units": 1,
+      "restocked_units": 0,
+      "shrink_units": 0,
+      "closing_on_hand_units": 9,
+      "reserved_units": 1,
+      "available_units": 8,
+      "in_transit_units": 6
+    },
+    {
+      "inventory_week_index": 0,
+      "location_key": 1,
+      "sku_key": 3,
+      "week_start_date_key": 20240101,
+      "week_end_date_key": 20240107,
+      "opening_on_hand_units": 15,
+      "receipt_units": 6,
+      "sold_units": 6,
+      "restocked_units": 0,
+      "shrink_units": 0,
+      "closing_on_hand_units": 15,
+      "reserved_units": 0,
+      "available_units": 15,
+      "in_transit_units": 5
+    }
+  ]
+}

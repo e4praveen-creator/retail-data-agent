@@ -1,0 +1,531 @@
+{
+  "passed": true,
+  "check_count": 105,
+  "checks": [
+    {
+      "check": "dim_date: primary key uniqueness",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "dim_date: required columns",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "dim_time: primary key uniqueness",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "dim_time: required columns",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "dim_channel: primary key uniqueness",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "dim_channel: required columns",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "dim_fulfillment_method: primary key uniqueness",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "dim_fulfillment_method: required columns",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "dim_store: primary key uniqueness",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "dim_store: required columns",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "dim_location: primary key uniqueness",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "dim_location: required columns",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "dim_location.store_key: foreign key",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "dim_division: primary key uniqueness",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "dim_division: required columns",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "dim_department: primary key uniqueness",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "dim_department: required columns",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "dim_department.division_key: foreign key",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "dim_category: primary key uniqueness",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "dim_category: required columns",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "dim_category.department_key: foreign key",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "dim_brand: primary key uniqueness",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "dim_brand: required columns",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "dim_color: primary key uniqueness",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "dim_color: required columns",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "dim_size: primary key uniqueness",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "dim_size: required columns",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "dim_style: primary key uniqueness",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "dim_style: required columns",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "dim_style.category_key: foreign key",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "dim_style.brand_key: foreign key",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "dim_sku: primary key uniqueness",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "dim_sku: required columns",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "dim_sku.style_key: foreign key",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "dim_sku.color_key: foreign key",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "dim_sku.size_key: foreign key",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "dim_customer: primary key uniqueness",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "dim_customer: required columns",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "dim_customer.home_store_key: foreign key",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "dim_loyalty: primary key uniqueness",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "dim_loyalty: required columns",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "dim_loyalty.customer_key: foreign key",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "dim_promotion: primary key uniqueness",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "dim_promotion: required columns",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "dim_promotion.division_key: foreign key",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "dim_promotion.channel_key: foreign key",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "dim_return_reason: primary key uniqueness",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "dim_return_reason: required columns",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "fact_price_history: primary key uniqueness",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "fact_price_history: required columns",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "fact_price_history.sku_key: foreign key",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "fact_price_history.channel_key: foreign key",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "fact_transaction: primary key uniqueness",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "fact_transaction: required columns",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "fact_transaction.date_key: foreign key",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "fact_transaction.time_key: foreign key",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "fact_transaction.customer_key: foreign key",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "fact_transaction.loyalty_key: foreign key",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "fact_transaction.channel_key: foreign key",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "fact_transaction.selling_store_key: foreign key",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "fact_transaction.market_store_key: foreign key",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "fact_transaction.fulfillment_method_key: foreign key",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "fact_sales_line: primary key uniqueness",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "fact_sales_line: required columns",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "fact_sales_line.transaction_key: foreign key",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "fact_sales_line.date_key: foreign key",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "fact_sales_line.sku_key: foreign key",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "fact_sales_line.price_key: foreign key",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "fact_sales_line.promotion_key: foreign key",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "fact_sales_line.fulfillment_location_key: foreign key",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "fact_return_line: primary key uniqueness",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "fact_return_line: required columns",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "fact_return_line.sales_line_key: foreign key",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "fact_return_line.transaction_key: foreign key",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "fact_return_line.sku_key: foreign key",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "fact_return_line.return_date_key: foreign key",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "fact_return_line.return_reason_key: foreign key",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "fact_return_line.return_location_key: foreign key",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "fact_inventory_weekly: primary key uniqueness",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "fact_inventory_weekly: required columns",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "fact_inventory_weekly.location_key: foreign key",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "fact_inventory_weekly.sku_key: foreign key",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "fact_inventory_weekly.week_start_date_key: foreign key",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "fact_inventory_weekly.week_end_date_key: foreign key",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "exact transaction headers",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "sales line positions",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "header versus line reconciliation",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "sale arithmetic and positivity",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "header totals and shipping",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "sale/header dates and local timestamps",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "loyalty ownership",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "customer and loyalty active before sale",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "fulfillment and channel consistency",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "price validity and SKU/channel alignment",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "price periods continuous and nonoverlapping",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "price coverage",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "promotion eligibility and amount",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "return linkage, limits and refunds",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "total returns bounded by original sale",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "inventory balance and nonnegative stock",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "inventory continuity",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "inventory complete coverage",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "inventory sales reconciliation",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "inventory return reconciliation",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "check": "calendar continuous through return tail",
+      "violations": 0,
+      "passed": true
+    }
+  ]
+}

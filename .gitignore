@@ -1,0 +1,22 @@
+.DS_Store
+.venv/
+.venv-runtime/
+**/node_modules/
+.pnpm-store/
+**/__pycache__/
+*.pyc
+.env
+.env.*
+!.env.example
+retail_data/data/
+retail_data_source.zip
+retail_app/state/*
+!retail_app/state/.gitkeep
+retail_app/tmp/
+sources/
+AGENTS.md
+
+# Local installation archive includes data and may contain private settings/history.
+/Milky Way 2.0.zip
+# Local renamed reading copy; publish the canonical generated HANDBOOK.html.
+/Milky Way 2.0/retail_app/docs/developer/HANDBOOK Most Important.html

@@ -1,0 +1,2257 @@
+{
+  "id": "enterprise-core",
+  "name": "Enterprise runtime contracts",
+  "description": "Code-authored regression contracts against real runtime functions, retrieval, schema/query guards and evidence-bound formatting. These fixtures are not a human-reviewed benchmark of model answer quality. Live semantic and causal judgment remains human review pending.",
+  "review_status": "code_reviewed",
+  "review_notes": "Expected outputs derive from source contracts and synthetic fixture values. Execution receipts verify the current implementation. No human domain expert review is claimed.",
+  "cases": [
+    {
+      "id": "design-trend",
+      "name": "Does the trend playbook retain its required answer and visual contract?",
+      "question": "Does the trend playbook retain its required answer and visual contract?",
+      "category": "legacy_playbooks",
+      "mode": "deterministic",
+      "contract": {
+        "type": "playbook_contract",
+        "inputs": {
+          "slug": "trend"
+        }
+      },
+      "expected": {
+        "equals": {
+          "slug": "trend",
+          "sections": [
+            "Headline",
+            "Scope and metric",
+            "Primary visual",
+            "Supporting values",
+            "Interpretation",
+            "Limitations",
+            "Next question"
+          ]
+        },
+        "min_length": {
+          "method": 10,
+          "guardrails": 10,
+          "visual_spec": 30,
+          "sources": 2
+        }
+      },
+      "requires_human_review": false
+    },
+    {
+      "id": "design-pvm",
+      "name": "Does the pvm playbook retain its required answer and visual contract?",
+      "question": "Does the pvm playbook retain its required answer and visual contract?",
+      "category": "legacy_playbooks",
+      "mode": "deterministic",
+      "contract": {
+        "type": "playbook_contract",
+        "inputs": {
+          "slug": "pvm"
+        }
+      },
+      "expected": {
+        "equals": {
+          "slug": "pvm",
+          "sections": [
+            "Headline",
+            "Scope and metric",
+            "Primary visual",
+            "Supporting values",
+            "Interpretation",
+            "Limitations",
+            "Next question"
+          ]
+        },
+        "min_length": {
+          "method": 10,
+          "guardrails": 10,
+          "visual_spec": 30,
+          "sources": 2
+        }
+      },
+      "requires_human_review": false
+    },
+    {
+      "id": "design-growth",
+      "name": "Does the growth playbook retain its required answer and visual contract?",
+      "question": "Does the growth playbook retain its required answer and visual contract?",
+      "category": "legacy_playbooks",
+      "mode": "deterministic",
+      "contract": {
+        "type": "playbook_contract",
+        "inputs": {
+          "slug": "growth"
+        }
+      },
+      "expected": {
+        "equals": {
+          "slug": "growth",
+          "sections": [
+            "Headline",
+            "Scope and metric",
+            "Primary visual",
+            "Supporting values",
+            "Interpretation",
+            "Limitations",
+            "Next question"
+          ]
+        },
+        "min_length": {
+          "method": 10,
+          "guardrails": 10,
+          "visual_spec": 30,
+          "sources": 2
+        }
+      },
+      "requires_human_review": false
+    },
+    {
+      "id": "design-margin",
+      "name": "Does the margin playbook retain its required answer and visual contract?",
+      "question": "Does the margin playbook retain its required answer and visual contract?",
+      "category": "legacy_playbooks",
+      "mode": "deterministic",
+      "contract": {
+        "type": "playbook_contract",
+        "inputs": {
+          "slug": "margin"
+        }
+      },
+      "expected": {
+        "equals": {
+          "slug": "margin",
+          "sections": [
+            "Headline",
+            "Scope and metric",
+            "Primary visual",
+            "Supporting values",
+            "Interpretation",
+            "Limitations",
+            "Next question"
+          ]
+        },
+        "min_length": {
+          "method": 10,
+          "guardrails": 10,
+          "visual_spec": 30,
+          "sources": 2
+        }
+      },
+      "requires_human_review": false
+    },
+    {
+      "id": "design-seasonality",
+      "name": "Does the seasonality playbook retain its required answer and visual contract?",
+      "question": "Does the seasonality playbook retain its required answer and visual contract?",
+      "category": "legacy_playbooks",
+      "mode": "deterministic",
+      "contract": {
+        "type": "playbook_contract",
+        "inputs": {
+          "slug": "seasonality"
+        }
+      },
+      "expected": {
+        "equals": {
+          "slug": "seasonality",
+          "sections": [
+            "Headline",
+            "Scope and metric",
+            "Primary visual",
+            "Supporting values",
+            "Interpretation",
+            "Limitations",
+            "Next question"
+          ]
+        },
+        "min_length": {
+          "method": 10,
+          "guardrails": 10,
+          "visual_spec": 30,
+          "sources": 2
+        }
+      },
+      "requires_human_review": false
+    },
+    {
+      "id": "design-scorecard",
+      "name": "Does the scorecard playbook retain its required answer and visual contract?",
+      "question": "Does the scorecard playbook retain its required answer and visual contract?",
+      "category": "legacy_playbooks",
+      "mode": "deterministic",
+      "contract": {
+        "type": "playbook_contract",
+        "inputs": {
+          "slug": "scorecard"
+        }
+      },
+      "expected": {
+        "equals": {
+          "slug": "scorecard",
+          "sections": [
+            "Headline",
+            "Scope and metric",
+            "Primary visual",
+            "Supporting values",
+            "Interpretation",
+            "Limitations",
+            "Next question"
+          ]
+        },
+        "min_length": {
+          "method": 10,
+          "guardrails": 10,
+          "visual_spec": 30,
+          "sources": 2
+        }
+      },
+      "requires_human_review": false
+    },
+    {
+      "id": "design-channels",
+      "name": "Does the channels playbook retain its required answer and visual contract?",
+      "question": "Does the channels playbook retain its required answer and visual contract?",
+      "category": "legacy_playbooks",
+      "mode": "deterministic",
+      "contract": {
+        "type": "playbook_contract",
+        "inputs": {
+          "slug": "channels"
+        }
+      },
+      "expected": {
+        "equals": {
+          "slug": "channels",
+          "sections": [
+            "Headline",
+            "Scope and metric",
+            "Primary visual",
+            "Supporting values",
+            "Interpretation",
+            "Limitations",
+            "Next question"
+          ]
+        },
+        "min_length": {
+          "method": 10,
+          "guardrails": 10,
+          "visual_spec": 30,
+          "sources": 2
+        }
+      },
+      "requires_human_review": false
+    },
+    {
+      "id": "design-concentration",
+      "name": "Does the concentration playbook retain its required answer and visual contract?",
+      "question": "Does the concentration playbook retain its required answer and visual contract?",
+      "category": "legacy_playbooks",
+      "mode": "deterministic",
+      "contract": {
+        "type": "playbook_contract",
+        "inputs": {
+          "slug": "concentration"
+        }
+      },
+      "expected": {
+        "equals": {
+          "slug": "concentration",
+          "sections": [
+            "Headline",
+            "Scope and metric",
+            "Primary visual",
+            "Supporting values",
+            "Interpretation",
+            "Limitations",
+            "Next question"
+          ]
+        },
+        "min_length": {
+          "method": 10,
+          "guardrails": 10,
+          "visual_spec": 30,
+          "sources": 2
+        }
+      },
+      "requires_human_review": false
+    },
+    {
+      "id": "design-pricing",
+      "name": "Does the pricing playbook retain its required answer and visual contract?",
+      "question": "Does the pricing playbook retain its required answer and visual contract?",
+      "category": "legacy_playbooks",
+      "mode": "deterministic",
+      "contract": {
+        "type": "playbook_contract",
+        "inputs": {
+          "slug": "pricing"
+        }
+      },
+      "expected": {
+        "equals": {
+          "slug": "pricing",
+          "sections": [
+            "Headline",
+            "Scope and metric",
+            "Primary visual",
+            "Supporting values",
+            "Interpretation",
+            "Limitations",
+            "Next question"
+          ]
+        },
+        "min_length": {
+          "method": 10,
+          "guardrails": 10,
+          "visual_spec": 30,
+          "sources": 2
+        }
+      },
+      "requires_human_review": false
+    },
+    {
+      "id": "design-promotions",
+      "name": "Does the promotions playbook retain its required answer and visual contract?",
+      "question": "Does the promotions playbook retain its required answer and visual contract?",
+      "category": "legacy_playbooks",
+      "mode": "deterministic",
+      "contract": {
+        "type": "playbook_contract",
+        "inputs": {
+          "slug": "promotions"
+        }
+      },
+      "expected": {
+        "equals": {
+          "slug": "promotions",
+          "sections": [
+            "Headline",
+            "Scope and metric",
+            "Primary visual",
+            "Supporting values",
+            "Interpretation",
+            "Limitations",
+            "Next question"
+          ]
+        },
+        "min_length": {
+          "method": 10,
+          "guardrails": 10,
+          "visual_spec": 30,
+          "sources": 2
+        }
+      },
+      "requires_human_review": false
+    },
+    {
+      "id": "design-cohorts",
+      "name": "Does the cohorts playbook retain its required answer and visual contract?",
+      "question": "Does the cohorts playbook retain its required answer and visual contract?",
+      "category": "legacy_playbooks",
+      "mode": "deterministic",
+      "contract": {
+        "type": "playbook_contract",
+        "inputs": {
+          "slug": "cohorts"
+        }
+      },
+      "expected": {
+        "equals": {
+          "slug": "cohorts",
+          "sections": [
+            "Headline",
+            "Scope and metric",
+            "Primary visual",
+            "Supporting values",
+            "Interpretation",
+            "Limitations",
+            "Next question"
+          ]
+        },
+        "min_length": {
+          "method": 10,
+          "guardrails": 10,
+          "visual_spec": 30,
+          "sources": 2
+        }
+      },
+      "requires_human_review": false
+    },
+    {
+      "id": "design-lapse",
+      "name": "Does the lapse playbook retain its required answer and visual contract?",
+      "question": "Does the lapse playbook retain its required answer and visual contract?",
+      "category": "legacy_playbooks",
+      "mode": "deterministic",
+      "contract": {
+        "type": "playbook_contract",
+        "inputs": {
+          "slug": "lapse"
+        }
+      },
+      "expected": {
+        "equals": {
+          "slug": "lapse",
+          "sections": [
+            "Headline",
+            "Scope and metric",
+            "Primary visual",
+            "Supporting values",
+            "Interpretation",
+            "Limitations",
+            "Next question"
+          ]
+        },
+        "min_length": {
+          "method": 10,
+          "guardrails": 10,
+          "visual_spec": 30,
+          "sources": 2
+        }
+      },
+      "requires_human_review": false
+    },
+    {
+      "id": "design-segments",
+      "name": "Does the segments playbook retain its required answer and visual contract?",
+      "question": "Does the segments playbook retain its required answer and visual contract?",
+      "category": "legacy_playbooks",
+      "mode": "deterministic",
+      "contract": {
+        "type": "playbook_contract",
+        "inputs": {
+          "slug": "segments"
+        }
+      },
+      "expected": {
+        "equals": {
+          "slug": "segments",
+          "sections": [
+            "Headline",
+            "Scope and metric",
+            "Primary visual",
+            "Supporting values",
+            "Interpretation",
+            "Limitations",
+            "Next question"
+          ]
+        },
+        "min_length": {
+          "method": 10,
+          "guardrails": 10,
+          "visual_spec": 30,
+          "sources": 2
+        }
+      },
+      "requires_human_review": false
+    },
+    {
+      "id": "design-affinity",
+      "name": "Does the affinity playbook retain its required answer and visual contract?",
+      "question": "Does the affinity playbook retain its required answer and visual contract?",
+      "category": "legacy_playbooks",
+      "mode": "deterministic",
+      "contract": {
+        "type": "playbook_contract",
+        "inputs": {
+          "slug": "affinity"
+        }
+      },
+      "expected": {
+        "equals": {
+          "slug": "affinity",
+          "sections": [
+            "Headline",
+            "Scope and metric",
+            "Primary visual",
+            "Supporting values",
+            "Interpretation",
+            "Limitations",
+            "Next question"
+          ]
+        },
+        "min_length": {
+          "method": 10,
+          "guardrails": 10,
+          "visual_spec": 30,
+          "sources": 2
+        }
+      },
+      "requires_human_review": false
+    },
+    {
+      "id": "design-loyalty",
+      "name": "Does the loyalty playbook retain its required answer and visual contract?",
+      "question": "Does the loyalty playbook retain its required answer and visual contract?",
+      "category": "legacy_playbooks",
+      "mode": "deterministic",
+      "contract": {
+        "type": "playbook_contract",
+        "inputs": {
+          "slug": "loyalty"
+        }
+      },
+      "expected": {
+        "equals": {
+          "slug": "loyalty",
+          "sections": [
+            "Headline",
+            "Scope and metric",
+            "Primary visual",
+            "Supporting values",
+            "Interpretation",
+            "Limitations",
+            "Next question"
+          ]
+        },
+        "min_length": {
+          "method": 10,
+          "guardrails": 10,
+          "visual_spec": 30,
+          "sources": 2
+        }
+      },
+      "requires_human_review": false
+    },
+    {
+      "id": "design-returns",
+      "name": "Does the returns playbook retain its required answer and visual contract?",
+      "question": "Does the returns playbook retain its required answer and visual contract?",
+      "category": "legacy_playbooks",
+      "mode": "deterministic",
+      "contract": {
+        "type": "playbook_contract",
+        "inputs": {
+          "slug": "returns"
+        }
+      },
+      "expected": {
+        "equals": {
+          "slug": "returns",
+          "sections": [
+            "Headline",
+            "Scope and metric",
+            "Primary visual",
+            "Supporting values",
+            "Interpretation",
+            "Limitations",
+            "Next question"
+          ]
+        },
+        "min_length": {
+          "method": 10,
+          "guardrails": 10,
+          "visual_spec": 30,
+          "sources": 2
+        }
+      },
+      "requires_human_review": false
+    },
+    {
+      "id": "design-velocity",
+      "name": "Does the velocity playbook retain its required answer and visual contract?",
+      "question": "Does the velocity playbook retain its required answer and visual contract?",
+      "category": "legacy_playbooks",
+      "mode": "deterministic",
+      "contract": {
+        "type": "playbook_contract",
+        "inputs": {
+          "slug": "velocity"
+        }
+      },
+      "expected": {
+        "equals": {
+          "slug": "velocity",
+          "sections": [
+            "Headline",
+            "Scope and metric",
+            "Primary visual",
+            "Supporting values",
+            "Interpretation",
+            "Limitations",
+            "Next question"
+          ]
+        },
+        "min_length": {
+          "method": 10,
+          "guardrails": 10,
+          "visual_spec": 30,
+          "sources": 2
+        }
+      },
+      "requires_human_review": false
+    },
+    {
+      "id": "design-inventory",
+      "name": "Does the inventory playbook retain its required answer and visual contract?",
+      "question": "Does the inventory playbook retain its required answer and visual contract?",
+      "category": "legacy_playbooks",
+      "mode": "deterministic",
+      "contract": {
+        "type": "playbook_contract",
+        "inputs": {
+          "slug": "inventory"
+        }
+      },
+      "expected": {
+        "equals": {
+          "slug": "inventory",
+          "sections": [
+            "Headline",
+            "Scope and metric",
+            "Primary visual",
+            "Supporting values",
+            "Interpretation",
+            "Limitations",
+            "Next question"
+          ]
+        },
+        "min_length": {
+          "method": 10,
+          "guardrails": 10,
+          "visual_spec": 30,
+          "sources": 2
+        }
+      },
+      "requires_human_review": false
+    },
+    {
+      "id": "design-fulfillment",
+      "name": "Does the fulfillment playbook retain its required answer and visual contract?",
+      "question": "Does the fulfillment playbook retain its required answer and visual contract?",
+      "category": "legacy_playbooks",
+      "mode": "deterministic",
+      "contract": {
+        "type": "playbook_contract",
+        "inputs": {
+          "slug": "fulfillment"
+        }
+      },
+      "expected": {
+        "equals": {
+          "slug": "fulfillment",
+          "sections": [
+            "Headline",
+            "Scope and metric",
+            "Primary visual",
+            "Supporting values",
+            "Interpretation",
+            "Limitations",
+            "Next question"
+          ]
+        },
+        "min_length": {
+          "method": 10,
+          "guardrails": 10,
+          "visual_spec": 30,
+          "sources": 2
+        }
+      },
+      "requires_human_review": false
+    },
+    {
+      "id": "metric-sales",
+      "name": "Normalize the sales metric without changing its units.",
+      "question": "Normalize the sales metric without changing its units.",
+      "category": "metrics",
+      "mode": "deterministic",
+      "contract": {
+        "type": "scope",
+        "inputs": {
+          "candidate": {
+            "metric": "sales"
+          }
+        }
+      },
+      "expected": {
+        "equals": {
+          "metric": "sales_cents"
+        }
+      },
+      "requires_human_review": false
+    },
+    {
+      "id": "metric-aov",
+      "name": "Normalize the aov metric without changing its units.",
+      "question": "Normalize the aov metric without changing its units.",
+      "category": "metrics",
+      "mode": "deterministic",
+      "contract": {
+        "type": "scope",
+        "inputs": {
+          "candidate": {
+            "metric": "aov"
+          }
+        }
+      },
+      "expected": {
+        "equals": {
+          "metric": "aov_cents"
+        }
+      },
+      "requires_human_review": false
+    },
+    {
+      "id": "metric-returns",
+      "name": "Normalize the returns metric without changing its units.",
+      "question": "Normalize the returns metric without changing its units.",
+      "category": "metrics",
+      "mode": "deterministic",
+      "contract": {
+        "type": "scope",
+        "inputs": {
+          "candidate": {
+            "metric": "returns"
+          }
+        }
+      },
+      "expected": {
+        "equals": {
+          "metric": "returned_units"
+        }
+      },
+      "requires_human_review": false
+    },
+    {
+      "id": "metric-return_rate",
+      "name": "Normalize the return_rate metric without changing its units.",
+      "question": "Normalize the return_rate metric without changing its units.",
+      "category": "metrics",
+      "mode": "deterministic",
+      "contract": {
+        "type": "scope",
+        "inputs": {
+          "candidate": {
+            "metric": "return_rate"
+          }
+        }
+      },
+      "expected": {
+        "equals": {
+          "metric": "return_rate_pct"
+        }
+      },
+      "requires_human_review": false
+    },
+    {
+      "id": "metric-margin",
+      "name": "Normalize the margin metric without changing its units.",
+      "question": "Normalize the margin metric without changing its units.",
+      "category": "metrics",
+      "mode": "deterministic",
+      "contract": {
+        "type": "scope",
+        "inputs": {
+          "candidate": {
+            "metric": "margin"
+          }
+        }
+      },
+      "expected": {
+        "equals": {
+          "metric": "margin_cents"
+        }
+      },
+      "requires_human_review": false
+    },
+    {
+      "id": "metric-quantity",
+      "name": "Normalize the quantity metric without changing its units.",
+      "question": "Normalize the quantity metric without changing its units.",
+      "category": "metrics",
+      "mode": "deterministic",
+      "contract": {
+        "type": "scope",
+        "inputs": {
+          "candidate": {
+            "metric": "quantity"
+          }
+        }
+      },
+      "expected": {
+        "equals": {
+          "metric": "units"
+        }
+      },
+      "requires_human_review": false
+    },
+    {
+      "id": "basis-original_sales",
+      "name": "Preserve the explicit original_sales return basis.",
+      "question": "Preserve the explicit original_sales return basis.",
+      "category": "return_basis",
+      "mode": "deterministic",
+      "contract": {
+        "type": "scope",
+        "inputs": {
+          "candidate": {
+            "return_basis": "original_sales"
+          }
+        }
+      },
+      "expected": {
+        "equals": {
+          "return_basis": "before_returns"
+        }
+      },
+      "requires_human_review": false
+    },
+    {
+      "id": "basis-cohort",
+      "name": "Preserve the explicit cohort return basis.",
+      "question": "Preserve the explicit cohort return basis.",
+      "category": "return_basis",
+      "mode": "deterministic",
+      "contract": {
+        "type": "scope",
+        "inputs": {
+          "candidate": {
+            "return_basis": "cohort"
+          }
+        }
+      },
+      "expected": {
+        "equals": {
+          "return_basis": "sales_cohort"
+        }
+      },
+      "requires_human_review": false
+    },
+    {
+      "id": "basis-calendar",
+      "name": "Preserve the explicit calendar return basis.",
+      "question": "Preserve the explicit calendar return basis.",
+      "category": "return_basis",
+      "mode": "deterministic",
+      "contract": {
+        "type": "scope",
+        "inputs": {
+          "candidate": {
+            "return_basis": "calendar"
+          }
+        }
+      },
+      "expected": {
+        "equals": {
+          "return_basis": "return_date"
+        }
+      },
+      "requires_human_review": false
+    },
+    {
+      "id": "channel-app",
+      "name": "Resolve app to its exact supported retail channel.",
+      "question": "Resolve app to its exact supported retail channel.",
+      "category": "entity_resolution",
+      "mode": "deterministic",
+      "contract": {
+        "type": "scope",
+        "inputs": {
+          "candidate": {
+            "filters": [
+              {
+                "field": "channel",
+                "values": [
+                  "app"
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "expected": {
+        "equals": {
+          "filters.0.field": "channel_name",
+          "filters.0.values": [
+            "Mobile app"
+          ]
+        }
+      },
+      "requires_human_review": false
+    },
+    {
+      "id": "channel-website",
+      "name": "Resolve website to its exact supported retail channel.",
+      "question": "Resolve website to its exact supported retail channel.",
+      "category": "entity_resolution",
+      "mode": "deterministic",
+      "contract": {
+        "type": "scope",
+        "inputs": {
+          "candidate": {
+            "filters": [
+              {
+                "field": "channel",
+                "values": [
+                  "website"
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "expected": {
+        "equals": {
+          "filters.0.field": "channel_name",
+          "filters.0.values": [
+            "Web"
+          ]
+        }
+      },
+      "requires_human_review": false
+    },
+    {
+      "id": "channel-pos",
+      "name": "Resolve pos to its exact supported retail channel.",
+      "question": "Resolve pos to its exact supported retail channel.",
+      "category": "entity_resolution",
+      "mode": "deterministic",
+      "contract": {
+        "type": "scope",
+        "inputs": {
+          "candidate": {
+            "filters": [
+              {
+                "field": "channel",
+                "values": [
+                  "pos"
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "expected": {
+        "equals": {
+          "filters.0.field": "channel_name",
+          "filters.0.values": [
+            "Store POS"
+          ]
+        }
+      },
+      "requires_human_review": false
+    },
+    {
+      "id": "reject-unknown-metric",
+      "name": "Reject unknown metric instead of silently broadening the answer.",
+      "question": "Reject unknown metric instead of silently broadening the answer.",
+      "category": "adverse_scope",
+      "mode": "deterministic",
+      "contract": {
+        "type": "scope",
+        "inputs": {
+          "candidate": {
+            "metric": "customer_lifetime_profit"
+          }
+        }
+      },
+      "expected": {
+        "error_contains": "Unsupported retail measure"
+      },
+      "requires_human_review": false
+    },
+    {
+      "id": "reject-unknown-filter",
+      "name": "Reject unknown filter instead of silently broadening the answer.",
+      "question": "Reject unknown filter instead of silently broadening the answer.",
+      "category": "adverse_scope",
+      "mode": "deterministic",
+      "contract": {
+        "type": "scope",
+        "inputs": {
+          "candidate": {
+            "filters": [
+              {
+                "field": "device_id",
+                "values": [
+                  "abc"
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "expected": {
+        "error_contains": "Unsupported retail scope field"
+      },
+      "requires_human_review": false
+    },
+    {
+      "id": "reject-unknown-channel",
+      "name": "Reject unknown channel instead of silently broadening the answer.",
+      "question": "Reject unknown channel instead of silently broadening the answer.",
+      "category": "adverse_scope",
+      "mode": "deterministic",
+      "contract": {
+        "type": "scope",
+        "inputs": {
+          "candidate": {
+            "filters": [
+              {
+                "field": "channel",
+                "values": [
+                  "social network"
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "expected": {
+        "error_contains": "Unknown channel_name"
+      },
+      "requires_human_review": false
+    },
+    {
+      "id": "reject-unknown-basis",
+      "name": "Reject unknown basis instead of silently broadening the answer.",
+      "question": "Reject unknown basis instead of silently broadening the answer.",
+      "category": "adverse_scope",
+      "mode": "deterministic",
+      "contract": {
+        "type": "scope",
+        "inputs": {
+          "candidate": {
+            "return_basis": "predictive"
+          }
+        }
+      },
+      "expected": {
+        "error_contains": "return_basis must be"
+      },
+      "requires_human_review": false
+    },
+    {
+      "id": "reject-half-period",
+      "name": "Reject half period instead of silently broadening the answer.",
+      "question": "Reject half period instead of silently broadening the answer.",
+      "category": "adverse_scope",
+      "mode": "deterministic",
+      "contract": {
+        "type": "scope",
+        "inputs": {
+          "candidate": {
+            "start": "2025-01-01"
+          }
+        }
+      },
+      "expected": {
+        "error_contains": "Provide both start and end"
+      },
+      "requires_human_review": false
+    },
+    {
+      "id": "reject-outside-sales",
+      "name": "Reject outside sales instead of silently broadening the answer.",
+      "question": "Reject outside sales instead of silently broadening the answer.",
+      "category": "adverse_scope",
+      "mode": "deterministic",
+      "contract": {
+        "type": "scope",
+        "inputs": {
+          "candidate": {
+            "start": "2026-01-01",
+            "end": "2026-01-31"
+          }
+        }
+      },
+      "expected": {
+        "error_contains": "Sales dates must be"
+      },
+      "requires_human_review": false
+    },
+    {
+      "id": "reject-reversed-period",
+      "name": "Reject reversed period instead of silently broadening the answer.",
+      "question": "Reject reversed period instead of silently broadening the answer.",
+      "category": "adverse_scope",
+      "mode": "deterministic",
+      "contract": {
+        "type": "scope",
+        "inputs": {
+          "candidate": {
+            "start": "2025-02-01",
+            "end": "2025-01-01"
+          }
+        }
+      },
+      "expected": {
+        "error_contains": "Sales dates must be"
+      },
+      "requires_human_review": false
+    },
+    {
+      "id": "reject-negative-key",
+      "name": "Reject negative key instead of silently broadening the answer.",
+      "question": "Reject negative key instead of silently broadening the answer.",
+      "category": "adverse_scope",
+      "mode": "deterministic",
+      "contract": {
+        "type": "scope",
+        "inputs": {
+          "candidate": {
+            "filters": [
+              {
+                "field": "customer_key",
+                "values": [
+                  -1
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "expected": {
+        "error_contains": "nonnegative integer"
+      },
+      "requires_human_review": false
+    },
+    {
+      "id": "reject-invalid-boolean",
+      "name": "Reject invalid boolean instead of silently broadening the answer.",
+      "question": "Reject invalid boolean instead of silently broadening the answer.",
+      "category": "adverse_scope",
+      "mode": "deterministic",
+      "contract": {
+        "type": "scope",
+        "inputs": {
+          "candidate": {
+            "filters": [
+              {
+                "field": "identified",
+                "values": [
+                  "maybe"
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "expected": {
+        "error_contains": "requires true or false"
+      },
+      "requires_human_review": false
+    },
+    {
+      "id": "reject-unknown-property",
+      "name": "Reject unknown property instead of silently broadening the answer.",
+      "question": "Reject unknown property instead of silently broadening the answer.",
+      "category": "adverse_scope",
+      "mode": "deterministic",
+      "contract": {
+        "type": "scope",
+        "inputs": {
+          "candidate": {
+            "sql": "select 1"
+          }
+        }
+      },
+      "expected": {
+        "error_contains": "Unknown scope properties"
+      },
+      "requires_human_review": false
+    },
+    {
+      "id": "correction-clear",
+      "name": "Clear filters explicitly during a follow-up.",
+      "question": "Clear filters explicitly during a follow-up.",
+      "category": "multi_turn",
+      "mode": "deterministic",
+      "contract": {
+        "type": "scope",
+        "inputs": {
+          "previous": {
+            "dates": {
+              "start": "2025-01-01",
+              "end": "2025-01-31",
+              "compare_start": "2024-01-01",
+              "compare_end": "2024-01-31"
+            },
+            "filters": [
+              {
+                "field": "channel_name",
+                "op": "in",
+                "values": [
+                  "Web"
+                ]
+              }
+            ]
+          },
+          "candidate": {
+            "filters": []
+          }
+        }
+      },
+      "expected": {
+        "equals": {
+          "filters": [],
+          "dates.start": "2025-01-01"
+        }
+      },
+      "requires_human_review": false
+    },
+    {
+      "id": "correction-date",
+      "name": "Changing current dates invalidates the old comparison period.",
+      "question": "Changing current dates invalidates the old comparison period.",
+      "category": "multi_turn",
+      "mode": "deterministic",
+      "contract": {
+        "type": "scope",
+        "inputs": {
+          "previous": {
+            "dates": {
+              "start": "2025-01-01",
+              "end": "2025-01-31",
+              "compare_start": "2024-01-01",
+              "compare_end": "2024-01-31"
+            },
+            "filters": [
+              {
+                "field": "channel_name",
+                "op": "in",
+                "values": [
+                  "Web"
+                ]
+              }
+            ]
+          },
+          "candidate": {
+            "start": "2025-02-01",
+            "end": "2025-02-28"
+          }
+        }
+      },
+      "expected": {
+        "equals": {
+          "dates.compare_start": null,
+          "dates.compare_end": null,
+          "filters.0.values": [
+            "Web"
+          ]
+        }
+      },
+      "requires_human_review": false
+    },
+    {
+      "id": "correction-channel",
+      "name": "A follow-up channel filter replaces the old channel.",
+      "question": "A follow-up channel filter replaces the old channel.",
+      "category": "multi_turn",
+      "mode": "deterministic",
+      "contract": {
+        "type": "scope",
+        "inputs": {
+          "previous": {
+            "dates": {
+              "start": "2025-01-01",
+              "end": "2025-01-31",
+              "compare_start": "2024-01-01",
+              "compare_end": "2024-01-31"
+            },
+            "filters": [
+              {
+                "field": "channel_name",
+                "op": "in",
+                "values": [
+                  "Web"
+                ]
+              }
+            ]
+          },
+          "candidate": {
+            "filters": [
+              {
+                "field": "channel",
+                "values": [
+                  "app"
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "expected": {
+        "equals": {
+          "filters.0.values": [
+            "Mobile app"
+          ]
+        }
+      },
+      "requires_human_review": false
+    },
+    {
+      "id": "retrieval-aov",
+      "name": "Retrieve source-grounded guidance for AOV metric definition.",
+      "question": "Retrieve source-grounded guidance for AOV metric definition.",
+      "category": "retrieval",
+      "mode": "deterministic",
+      "contract": {
+        "type": "retrieval",
+        "inputs": {
+          "query": "AOV metric definition"
+        }
+      },
+      "expected": {
+        "required_source_roles": [
+          "metric_contract"
+        ],
+        "contains": {
+          "sources": [
+            "no header-to-line fan-out"
+          ]
+        }
+      },
+      "requires_human_review": false
+    },
+    {
+      "id": "retrieval-causal-promo",
+      "name": "Retrieve source-grounded guidance for promotion incremental lift.",
+      "question": "Retrieve source-grounded guidance for promotion incremental lift.",
+      "category": "retrieval",
+      "mode": "deterministic",
+      "contract": {
+        "type": "retrieval",
+        "inputs": {
+          "query": "promotion incremental lift"
+        }
+      },
+      "expected": {
+        "required_source_roles": [
+          "question_router"
+        ],
+        "contains": {
+          "sources": [
+            "Randomized holdout"
+          ]
+        }
+      },
+      "requires_human_review": false
+    },
+    {
+      "id": "retrieval-repeat",
+      "name": "Retrieve source-grounded guidance for customer repeat 90 day maturity denominator.",
+      "question": "Retrieve source-grounded guidance for customer repeat 90 day maturity denominator.",
+      "category": "retrieval",
+      "mode": "deterministic",
+      "contract": {
+        "type": "retrieval",
+        "inputs": {
+          "query": "customer repeat 90 day maturity denominator"
+        }
+      },
+      "expected": {
+        "required_source_roles": [
+          "hypothesis_template"
+        ],
+        "contains": {
+          "sources": [
+            "mature-repeat"
+          ]
+        }
+      },
+      "requires_human_review": false
+    },
+    {
+      "id": "retrieval-return-tail",
+      "name": "Retrieve source-grounded guidance for sales date range returns tail.",
+      "question": "Retrieve source-grounded guidance for sales date range returns tail.",
+      "category": "retrieval",
+      "mode": "deterministic",
+      "contract": {
+        "type": "retrieval",
+        "inputs": {
+          "query": "sales date range returns tail"
+        }
+      },
+      "expected": {
+        "required_source_roles": [
+          "metric_contract"
+        ],
+        "contains": {
+          "sources": [
+            "March 1, 2026"
+          ]
+        }
+      },
+      "requires_human_review": false
+    },
+    {
+      "id": "retrieval-schema-join",
+      "name": "Retrieve source-grounded guidance for channel_key grain join fact_sales_line.",
+      "question": "Retrieve source-grounded guidance for channel_key grain join fact_sales_line.",
+      "category": "retrieval",
+      "mode": "deterministic",
+      "contract": {
+        "type": "retrieval",
+        "inputs": {
+          "query": "channel_key grain join fact_sales_line"
+        }
+      },
+      "expected": {
+        "required_source_roles": [
+          "schema"
+        ],
+        "contains": {
+          "sources": [
+            "fact_sales_line"
+          ]
+        }
+      },
+      "requires_human_review": false
+    },
+    {
+      "id": "retrieval-pvm",
+      "name": "Retrieve source-grounded guidance for visual price volume mix waterfall.",
+      "question": "Retrieve source-grounded guidance for visual price volume mix waterfall.",
+      "category": "retrieval",
+      "mode": "deterministic",
+      "contract": {
+        "type": "retrieval",
+        "inputs": {
+          "query": "visual price volume mix waterfall"
+        }
+      },
+      "expected": {
+        "required_source_roles": [
+          "visual_specification"
+        ],
+        "contains": {
+          "sources": [
+            "reconciled waterfall"
+          ]
+        }
+      },
+      "requires_human_review": false
+    },
+    {
+      "id": "retrieval-inventory",
+      "name": "Retrieve source-grounded guidance for inventory reconciliation validation checks.",
+      "question": "Retrieve source-grounded guidance for inventory reconciliation validation checks.",
+      "category": "retrieval",
+      "mode": "deterministic",
+      "contract": {
+        "type": "retrieval",
+        "inputs": {
+          "query": "inventory reconciliation validation checks"
+        }
+      },
+      "expected": {
+        "required_source_roles": [
+          "validation_record"
+        ],
+        "contains": {
+          "sources": [
+            "inventory sales reconciliation"
+          ]
+        }
+      },
+      "requires_human_review": false
+    },
+    {
+      "id": "retrieval-example",
+      "name": "Retrieve source-grounded guidance for worked example price volume mix.",
+      "question": "Retrieve source-grounded guidance for worked example price volume mix.",
+      "category": "retrieval",
+      "mode": "deterministic",
+      "contract": {
+        "type": "retrieval",
+        "inputs": {
+          "query": "worked example price volume mix"
+        }
+      },
+      "expected": {
+        "required_source_roles": [
+          "worked_example"
+        ],
+        "contains": {
+          "sources": [
+            "rerun the requested scope"
+          ]
+        }
+      },
+      "requires_human_review": false
+    },
+    {
+      "id": "sql-read",
+      "name": "Verify SQL contract: read.",
+      "question": "Verify SQL contract: read.",
+      "category": "query_safety",
+      "mode": "deterministic",
+      "contract": {
+        "type": "query",
+        "inputs": {
+          "sql": "SELECT 2 + 3 AS measured"
+        }
+      },
+      "expected": {
+        "equals": {
+          "rows.0.measured": 5
+        }
+      },
+      "requires_human_review": false
+    },
+    {
+      "id": "sql-count-channels",
+      "name": "Count the three retail channels and the unknown sentinel dimension row.",
+      "question": "Count the three retail channels and the unknown sentinel dimension row.",
+      "category": "query_safety",
+      "mode": "deterministic",
+      "contract": {
+        "type": "query",
+        "inputs": {
+          "sql": "SELECT count(*) AS channels FROM dim_channel"
+        }
+      },
+      "expected": {
+        "equals": {
+          "rows.0.channels": 4
+        }
+      },
+      "requires_human_review": false
+    },
+    {
+      "id": "sql-sales-years",
+      "name": "Verify SQL contract: sales years.",
+      "question": "Verify SQL contract: sales years.",
+      "category": "query_safety",
+      "mode": "deterministic",
+      "contract": {
+        "type": "query",
+        "inputs": {
+          "sql": "SELECT min(calendar_year) AS first_year, max(calendar_year) AS last_year FROM v_sales"
+        }
+      },
+      "expected": {
+        "equals": {
+          "rows.0.first_year": 2024,
+          "rows.0.last_year": 2025
+        }
+      },
+      "requires_human_review": false
+    },
+    {
+      "id": "sql-deny-delete",
+      "name": "Verify SQL contract: deny delete.",
+      "question": "Verify SQL contract: deny delete.",
+      "category": "query_safety",
+      "mode": "deterministic",
+      "contract": {
+        "type": "query",
+        "inputs": {
+          "sql": "DELETE FROM fact_transaction"
+        }
+      },
+      "expected": {
+        "error_contains": "Only one read-only SELECT"
+      },
+      "requires_human_review": false
+    },
+    {
+      "id": "sql-deny-multiple",
+      "name": "Verify SQL contract: deny multiple.",
+      "question": "Verify SQL contract: deny multiple.",
+      "category": "query_safety",
+      "mode": "deterministic",
+      "contract": {
+        "type": "query",
+        "inputs": {
+          "sql": "SELECT 1 AS x; SELECT 2 AS y"
+        }
+      },
+      "expected": {
+        "error_contains": "Only one read-only SELECT"
+      },
+      "requires_human_review": false
+    },
+    {
+      "id": "sql-deny-join",
+      "name": "Verify SQL contract: deny join.",
+      "question": "Verify SQL contract: deny join.",
+      "category": "query_safety",
+      "mode": "deterministic",
+      "contract": {
+        "type": "query",
+        "inputs": {
+          "sql": "SELECT count(*) AS n FROM fact_sales_line l JOIN dim_channel c ON 1=1"
+        }
+      },
+      "expected": {
+        "error_contains": "verified relationship"
+      },
+      "requires_human_review": false
+    },
+    {
+      "id": "sql-deny-header-fanout",
+      "name": "Verify SQL contract: deny header fanout.",
+      "question": "Verify SQL contract: deny header fanout.",
+      "category": "query_safety",
+      "mode": "deterministic",
+      "contract": {
+        "type": "query",
+        "inputs": {
+          "sql": "SELECT sum(t.net_sales_cents) AS sales FROM fact_transaction t JOIN fact_sales_line l ON t.transaction_key=l.transaction_key"
+        }
+      },
+      "expected": {
+        "error_contains": "Header-grain measures"
+      },
+      "requires_human_review": false
+    },
+    {
+      "id": "sql-deny-duplicate",
+      "name": "Verify SQL contract: deny duplicate.",
+      "question": "Verify SQL contract: deny duplicate.",
+      "category": "query_safety",
+      "mode": "deterministic",
+      "contract": {
+        "type": "query",
+        "inputs": {
+          "sql": "SELECT 1 AS x, 2 AS x"
+        }
+      },
+      "expected": {
+        "error_contains": "uniquely named"
+      },
+      "requires_human_review": false
+    },
+    {
+      "id": "cite-valid",
+      "name": "Keep references that exist in measured evidence.",
+      "question": "Keep references that exist in measured evidence.",
+      "category": "evidence",
+      "mode": "deterministic",
+      "contract": {
+        "type": "citations",
+        "inputs": {
+          "answer": "Measured result [E1].",
+          "evidence": [
+            {
+              "evidence_id": "E1",
+              "rows": [
+                {
+                  "channel": "Web",
+                  "sales_cents": 12345,
+                  "units": 3
+                },
+                {
+                  "channel": "Mobile app",
+                  "sales_cents": 6789,
+                  "units": 2
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "expected": {
+        "equals": {
+          "answer": "Measured result [E1].",
+          "warnings": []
+        }
+      },
+      "requires_human_review": false
+    },
+    {
+      "id": "cite-invalid",
+      "name": "Flag fabricated evidence references.",
+      "question": "Flag fabricated evidence references.",
+      "category": "evidence",
+      "mode": "deterministic",
+      "contract": {
+        "type": "citations",
+        "inputs": {
+          "answer": "Claim [E99].",
+          "evidence": [
+            {
+              "evidence_id": "E1",
+              "rows": [
+                {
+                  "channel": "Web",
+                  "sales_cents": 12345,
+                  "units": 3
+                },
+                {
+                  "channel": "Mobile app",
+                  "sales_cents": 6789,
+                  "units": 2
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "expected": {
+        "contains": {
+          "answer": [
+            "Unverified reference"
+          ]
+        },
+        "min_length": {
+          "warnings": 1
+        }
+      },
+      "requires_human_review": false
+    },
+    {
+      "id": "cite-source",
+      "name": "Accept a source reference registered in context.",
+      "question": "Accept a source reference registered in context.",
+      "category": "evidence",
+      "mode": "deterministic",
+      "contract": {
+        "type": "citations",
+        "inputs": {
+          "answer": "Definition [D1].",
+          "sources": [
+            {
+              "source_id": "D1"
+            }
+          ]
+        }
+      },
+      "expected": {
+        "equals": {
+          "answer": "Definition [D1].",
+          "warnings": []
+        }
+      },
+      "requires_human_review": false
+    },
+    {
+      "id": "format-cents",
+      "name": "Format measured cents as USD without a 100-fold error.",
+      "question": "Format measured cents as USD without a 100-fold error.",
+      "category": "response_quality",
+      "mode": "deterministic",
+      "contract": {
+        "type": "measured_values",
+        "inputs": {
+          "text": "Sales {{E1:0:sales_cents}} USD",
+          "evidence": [
+            {
+              "evidence_id": "E1",
+              "rows": [
+                {
+                  "channel": "Web",
+                  "sales_cents": 12345,
+                  "units": 3
+                },
+                {
+                  "channel": "Mobile app",
+                  "sales_cents": 6789,
+                  "units": 2
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "expected": {
+        "equals": {
+          "text": "Sales $123.45"
+        }
+      },
+      "requires_human_review": false
+    },
+    {
+      "id": "format-units",
+      "name": "Format measured units as a count.",
+      "question": "Format measured units as a count.",
+      "category": "response_quality",
+      "mode": "deterministic",
+      "contract": {
+        "type": "measured_values",
+        "inputs": {
+          "text": "Units {{E1:0:units}}",
+          "evidence": [
+            {
+              "evidence_id": "E1",
+              "rows": [
+                {
+                  "channel": "Web",
+                  "sales_cents": 12345,
+                  "units": 3
+                },
+                {
+                  "channel": "Mobile app",
+                  "sales_cents": 6789,
+                  "units": 2
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "expected": {
+        "equals": {
+          "text": "Units 3"
+        }
+      },
+      "requires_human_review": false
+    },
+    {
+      "id": "format-fabrication",
+      "name": "Reject a token referencing an unavailable evidence row.",
+      "question": "Reject a token referencing an unavailable evidence row.",
+      "category": "response_quality",
+      "mode": "deterministic",
+      "contract": {
+        "type": "measured_values",
+        "inputs": {
+          "text": "Sales {{E1:9:sales_cents}}",
+          "evidence": [
+            {
+              "evidence_id": "E1",
+              "rows": [
+                {
+                  "channel": "Web",
+                  "sales_cents": 12345,
+                  "units": 3
+                },
+                {
+                  "channel": "Mobile app",
+                  "sales_cents": 6789,
+                  "units": 2
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "expected": {
+        "error_contains": "unavailable evidence row"
+      },
+      "requires_human_review": false
+    },
+    {
+      "id": "compare-cells",
+      "name": "Calculate growth from referenced measured cells.",
+      "question": "Calculate growth from referenced measured cells.",
+      "category": "reconciliation",
+      "mode": "deterministic",
+      "contract": {
+        "type": "comparison",
+        "inputs": {
+          "arguments": {
+            "current_evidence_id": "E1",
+            "comparison_evidence_id": "E1",
+            "current_row": 0,
+            "comparison_row": 1,
+            "current_column": "units",
+            "comparison_column": "units"
+          },
+          "evidence": [
+            {
+              "evidence_id": "E1",
+              "rows": [
+                {
+                  "channel": "Web",
+                  "sales_cents": 12345,
+                  "units": 3
+                },
+                {
+                  "channel": "Mobile app",
+                  "sales_cents": 6789,
+                  "units": 2
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "expected": {
+        "equals": {
+          "change": 1.0,
+          "change_pct": 50.0,
+          "source_evidence_ids": [
+            "E1"
+          ]
+        }
+      },
+      "requires_human_review": false
+    },
+    {
+      "id": "compare-supplied",
+      "name": "Reject arbitrary numbers masquerading as measured comparisons.",
+      "question": "Reject arbitrary numbers masquerading as measured comparisons.",
+      "category": "reconciliation",
+      "mode": "deterministic",
+      "contract": {
+        "type": "comparison",
+        "inputs": {
+          "arguments": {
+            "current": 100,
+            "comparison": 50
+          },
+          "evidence": [
+            {
+              "evidence_id": "E1",
+              "rows": [
+                {
+                  "channel": "Web",
+                  "sales_cents": 12345,
+                  "units": 3
+                },
+                {
+                  "channel": "Mobile app",
+                  "sales_cents": 6789,
+                  "units": 2
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "expected": {
+        "error_contains": "Reference measured evidence IDs"
+      },
+      "requires_human_review": false
+    },
+    {
+      "id": "chart-bar",
+      "name": "Verify chart/table consistency: bar.",
+      "question": "Verify chart/table consistency: bar.",
+      "category": "visual_consistency",
+      "mode": "deterministic",
+      "contract": {
+        "type": "chart",
+        "inputs": {
+          "spec": {
+            "kind": "bar",
+            "evidence_id": "E1",
+            "x": "channel",
+            "y": "sales_cents"
+          },
+          "evidence": [
+            {
+              "evidence_id": "E1",
+              "rows": [
+                {
+                  "channel": "Web",
+                  "sales_cents": 12345,
+                  "units": 3
+                },
+                {
+                  "channel": "Mobile app",
+                  "sales_cents": 6789,
+                  "units": 2
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "expected": {
+        "equals": {
+          "kind": "bar",
+          "output_index": 0,
+          "y": "sales_cents"
+        }
+      },
+      "requires_human_review": false
+    },
+    {
+      "id": "chart-bad-source",
+      "name": "Verify chart/table consistency: bad source.",
+      "question": "Verify chart/table consistency: bad source.",
+      "category": "visual_consistency",
+      "mode": "deterministic",
+      "contract": {
+        "type": "chart",
+        "inputs": {
+          "spec": {
+            "kind": "bar",
+            "evidence_id": "E2",
+            "x": "channel",
+            "y": "sales_cents"
+          },
+          "evidence": [
+            {
+              "evidence_id": "E1",
+              "rows": [
+                {
+                  "channel": "Web",
+                  "sales_cents": 12345,
+                  "units": 3
+                },
+                {
+                  "channel": "Mobile app",
+                  "sales_cents": 6789,
+                  "units": 2
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "expected": {
+        "error_contains": "existing evidence ID"
+      },
+      "requires_human_review": false
+    },
+    {
+      "id": "chart-unknown-column",
+      "name": "Verify chart/table consistency: unknown column.",
+      "question": "Verify chart/table consistency: unknown column.",
+      "category": "visual_consistency",
+      "mode": "deterministic",
+      "contract": {
+        "type": "chart",
+        "inputs": {
+          "spec": {
+            "kind": "bar",
+            "evidence_id": "E1",
+            "x": "channel",
+            "y": "profit"
+          },
+          "evidence": [
+            {
+              "evidence_id": "E1",
+              "rows": [
+                {
+                  "channel": "Web",
+                  "sales_cents": 12345,
+                  "units": 3
+                },
+                {
+                  "channel": "Mobile app",
+                  "sales_cents": 6789,
+                  "units": 2
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "expected": {
+        "error_contains": "Every chart field"
+      },
+      "requires_human_review": false
+    },
+    {
+      "id": "chart-nonnumeric",
+      "name": "Verify chart/table consistency: nonnumeric.",
+      "question": "Verify chart/table consistency: nonnumeric.",
+      "category": "visual_consistency",
+      "mode": "deterministic",
+      "contract": {
+        "type": "chart",
+        "inputs": {
+          "spec": {
+            "kind": "bar",
+            "evidence_id": "E1",
+            "x": "units",
+            "y": "channel",
+            "comparison_y": "channel"
+          },
+          "evidence": [
+            {
+              "evidence_id": "E1",
+              "rows": [
+                {
+                  "channel": "Web",
+                  "sales_cents": 12345,
+                  "units": 3
+                },
+                {
+                  "channel": "Mobile app",
+                  "sales_cents": 6789,
+                  "units": 2
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "expected": {
+        "error_contains": "Chart measures must be numeric"
+      },
+      "requires_human_review": false
+    },
+    {
+      "id": "chart-bad-kind",
+      "name": "Verify chart/table consistency: bad kind.",
+      "question": "Verify chart/table consistency: bad kind.",
+      "category": "visual_consistency",
+      "mode": "deterministic",
+      "contract": {
+        "type": "chart",
+        "inputs": {
+          "spec": {
+            "kind": "pie",
+            "evidence_id": "E1",
+            "x": "channel",
+            "y": "sales_cents"
+          },
+          "evidence": [
+            {
+              "evidence_id": "E1",
+              "rows": [
+                {
+                  "channel": "Web",
+                  "sales_cents": 12345,
+                  "units": 3
+                },
+                {
+                  "channel": "Mobile app",
+                  "sales_cents": 6789,
+                  "units": 2
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "expected": {
+        "error_contains": "supported visualization type"
+      },
+      "requires_human_review": false
+    },
+    {
+      "id": "chart-units-mismatch",
+      "name": "Verify chart/table consistency: units mismatch.",
+      "question": "Verify chart/table consistency: units mismatch.",
+      "category": "visual_consistency",
+      "mode": "deterministic",
+      "contract": {
+        "type": "chart",
+        "inputs": {
+          "spec": {
+            "kind": "bar",
+            "evidence_id": "E1",
+            "x": "channel",
+            "y": "sales_cents",
+            "comparison_y": "units"
+          },
+          "evidence": [
+            {
+              "evidence_id": "E1",
+              "rows": [
+                {
+                  "channel": "Web",
+                  "sales_cents": 12345,
+                  "units": 3
+                },
+                {
+                  "channel": "Mobile app",
+                  "sales_cents": 6789,
+                  "units": 2
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "expected": {
+        "error_contains": "compatible units"
+      },
+      "requires_human_review": false
+    },
+    {
+      "id": "answer-structure",
+      "name": "Retain scope, metric basis, measured support and limitations.",
+      "question": "Retain scope, metric basis, measured support and limitations.",
+      "category": "response_quality",
+      "mode": "deterministic",
+      "contract": {
+        "type": "presentation",
+        "inputs": {
+          "presentation": {
+            "headline": "Sales were $123.45 [E1].",
+            "scope": "Web in the stated sales period",
+            "metric_basis": "USD before returns",
+            "interpretation": "Measured descriptive result.",
+            "limitations": [
+              "Synthetic fixture; no causal interpretation."
+            ],
+            "next_questions": [
+              "Compare the previous period?"
+            ],
+            "supporting_evidence_ids": [
+              "E1"
+            ]
+          },
+          "evidence": [
+            {
+              "evidence_id": "E1",
+              "rows": [
+                {
+                  "channel": "Web",
+                  "sales_cents": 12345,
+                  "units": 3
+                },
+                {
+                  "channel": "Mobile app",
+                  "sales_cents": 6789,
+                  "units": 2
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "expected": {
+        "equals": {
+          "headline": "Sales were $123.45 [E1].",
+          "version": 1
+        },
+        "min_length": {
+          "limitations": 1,
+          "sections": 7
+        }
+      },
+      "requires_human_review": false
+    },
+    {
+      "id": "answer-money",
+      "name": "Reject an unsupported monetary headline.",
+      "question": "Reject an unsupported monetary headline.",
+      "category": "response_quality",
+      "mode": "deterministic",
+      "contract": {
+        "type": "presentation",
+        "inputs": {
+          "presentation": {
+            "headline": "Sales were $999999.99.",
+            "scope": "Web in the stated sales period",
+            "metric_basis": "USD before returns",
+            "interpretation": "Measured descriptive result.",
+            "limitations": [
+              "Synthetic fixture; no causal interpretation."
+            ],
+            "next_questions": [
+              "Compare the previous period?"
+            ],
+            "supporting_evidence_ids": [
+              "E1"
+            ]
+          },
+          "evidence": [
+            {
+              "evidence_id": "E1",
+              "rows": [
+                {
+                  "channel": "Web",
+                  "sales_cents": 12345,
+                  "units": 3
+                },
+                {
+                  "channel": "Mobile app",
+                  "sales_cents": 6789,
+                  "units": 2
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "expected": {
+        "error_contains": "monetary claims do not match"
+      },
+      "requires_human_review": false
+    }
+  ]
+}

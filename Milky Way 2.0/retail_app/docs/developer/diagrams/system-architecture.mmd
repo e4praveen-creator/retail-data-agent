@@ -1,0 +1,30 @@
+flowchart TB
+    User[Local user] --> UI[React chat and data workspace]
+    subgraph Host[Trusted local machine]
+      UI -->|HTTP /api and polling| Boundary[HTTP limits, origin and response policy]
+      Boundary --> API[FastAPI :8766]
+      API --> Jobs[Admission and job control\n2 workers; cancellation; deadlines]
+      Jobs --> Agent[One Retail Agent\nLangGraph agent ↔ tools loop]
+      Agent --> Contracts[Allowlist and argument contracts]
+      Contracts --> Tools[27 declared tool interfaces]
+      Context[Frozen domain sources and published assets\nSection-aware lexical retrieval] -->|D references as untrusted input| Agent
+      UI --> Admin[Improve workspace\nOntology, skills, profiles, examples, evaluations]
+      Admin --> Registry[Draft revisions → immutable candidate releases]
+      Registry --> Eval[Separate bounded evaluation queue\nFrozen baseline vs candidate; isolated memories]
+      Eval --> Review[Deterministic gates and operator review]
+      Review --> Active[Atomic publish / restore active release]
+      Active -->|Capture once at admission| Context
+      State[(SQLite\nChats, preferences, scope, investigations)] <--> Tools
+      State <--> API
+      Tools --> Query[Scope normalization\nBound queries and SQL checks]
+      Query --> Warehouse[(Read-only DuckDB\nSummit Field)]
+      Warehouse --> Evidence[Measured E references\nSQL, parameters, scope, lineage]
+      Evidence --> Agent
+      Evidence --> Present[Presentation and chart validation]
+      Agent --> Present
+      Present --> Save[Atomic answer, message and job completion]
+      Save --> State
+      API --> UI
+    end
+    Agent <-->|HTTPS; bounded context and results| Provider[Configured OpenAI Responses API]
+    Parquet[Parquet exports] -. portable dataset export .-> Warehouse

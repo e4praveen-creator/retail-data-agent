@@ -1,0 +1,122 @@
+{
+  "passed": true,
+  "check_count": 23,
+  "method": "Exact bidirectional EXCEPT ALL in monthly batches",
+  "checks": [
+    {
+      "table": "dim_date",
+      "different_rows": 0,
+      "passed": true
+    },
+    {
+      "table": "dim_time",
+      "different_rows": 0,
+      "passed": true
+    },
+    {
+      "table": "dim_channel",
+      "different_rows": 0,
+      "passed": true
+    },
+    {
+      "table": "dim_fulfillment_method",
+      "different_rows": 0,
+      "passed": true
+    },
+    {
+      "table": "dim_store",
+      "different_rows": 0,
+      "passed": true
+    },
+    {
+      "table": "dim_location",
+      "different_rows": 0,
+      "passed": true
+    },
+    {
+      "table": "dim_division",
+      "different_rows": 0,
+      "passed": true
+    },
+    {
+      "table": "dim_department",
+      "different_rows": 0,
+      "passed": true
+    },
+    {
+      "table": "dim_category",
+      "different_rows": 0,
+      "passed": true
+    },
+    {
+      "table": "dim_brand",
+      "different_rows": 0,
+      "passed": true
+    },
+    {
+      "table": "dim_color",
+      "different_rows": 0,
+      "passed": true
+    },
+    {
+      "table": "dim_size",
+      "different_rows": 0,
+      "passed": true
+    },
+    {
+      "table": "dim_style",
+      "different_rows": 0,
+      "passed": true
+    },
+    {
+      "table": "dim_sku",
+      "different_rows": 0,
+      "passed": true
+    },
+    {
+      "table": "dim_customer",
+      "different_rows": 0,
+      "passed": true
+    },
+    {
+      "table": "dim_loyalty",
+      "different_rows": 0,
+      "passed": true
+    },
+    {
+      "table": "dim_promotion",
+      "different_rows": 0,
+      "passed": true
+    },
+    {
+      "table": "dim_return_reason",
+      "different_rows": 0,
+      "passed": true
+    },
+    {
+      "table": "fact_price_history",
+      "different_rows": 0,
+      "passed": true
+    },
+    {
+      "table": "fact_transaction",
+      "different_rows": 0,
+      "passed": true
+    },
+    {
+      "table": "fact_sales_line",
+      "different_rows": 0,
+      "passed": true
+    },
+    {
+      "table": "fact_return_line",
+      "different_rows": 0,
+      "passed": true
+    },
+    {
+      "table": "fact_inventory_weekly",
+      "different_rows": 0,
+      "passed": true
+    }
+  ]
+}

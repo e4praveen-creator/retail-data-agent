@@ -1,0 +1,18 @@
+import React from 'react';
+import {renderToString} from 'react-dom/server';
+import assert from 'node:assert/strict';
+import {ChatApp,Answer} from '../frontend/chat.jsx';
+import {InvestigationPanel} from '../frontend/investigation.jsx';
+const shell=renderToString(<ChatApp/>);
+assert(shell.includes('Milky Way 2.0'));
+assert(shell.includes('Message Retail Agent'));
+assert(!shell.includes('Investigation mode'));
+assert(!shell.includes('Hypothesis agent'));
+const explanation=renderToString(<Answer message={{text:'customer_key identifies a customer.',analysis:{response_type:'explanation',mode:'agent',outputs:[],context:[]}}}/>);
+assert(explanation.includes('customer_key identifies'));
+assert(!explanation.includes('Primary visual'));
+assert(!explanation.includes('Scope and metric'));
+const tree=renderToString(<InvestigationPanel snapshot={{id:'i',question:'What drove the change?',revision:3,status:'active',hypotheses:[{id:'H1',statement:'Units declined.',test:'Compare units.',falsifier:'Units are unchanged or higher.',status:'tested',verdict:'contradicted',interpretation:'Units rose in the selected period.',evidence:[]},{id:'H2',parent_id:'H1',statement:'Price changed.',test:'Compare price.',falsifier:'Price did not change.',status:'stale'}]}}/>);
+for(const value of ['Editable investigation','Units declined.','contradicted','stale','Edit','Exclude','Add hypothesis','Continue / retest','under H1'])assert(tree.includes(value),value);
+assert(tree.includes('aria-expanded="true"'));
+console.log('Milky Way conversational answer and editable investigation rendering passed.');

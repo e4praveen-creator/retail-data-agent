@@ -1,0 +1,386 @@
+{
+  "case_count": 76,
+  "cases": [
+    {
+      "id": "design-trend",
+      "category": "legacy_playbooks",
+      "contract": "playbook_contract"
+    },
+    {
+      "id": "design-pvm",
+      "category": "legacy_playbooks",
+      "contract": "playbook_contract"
+    },
+    {
+      "id": "design-growth",
+      "category": "legacy_playbooks",
+      "contract": "playbook_contract"
+    },
+    {
+      "id": "design-margin",
+      "category": "legacy_playbooks",
+      "contract": "playbook_contract"
+    },
+    {
+      "id": "design-seasonality",
+      "category": "legacy_playbooks",
+      "contract": "playbook_contract"
+    },
+    {
+      "id": "design-scorecard",
+      "category": "legacy_playbooks",
+      "contract": "playbook_contract"
+    },
+    {
+      "id": "design-channels",
+      "category": "legacy_playbooks",
+      "contract": "playbook_contract"
+    },
+    {
+      "id": "design-concentration",
+      "category": "legacy_playbooks",
+      "contract": "playbook_contract"
+    },
+    {
+      "id": "design-pricing",
+      "category": "legacy_playbooks",
+      "contract": "playbook_contract"
+    },
+    {
+      "id": "design-promotions",
+      "category": "legacy_playbooks",
+      "contract": "playbook_contract"
+    },
+    {
+      "id": "design-cohorts",
+      "category": "legacy_playbooks",
+      "contract": "playbook_contract"
+    },
+    {
+      "id": "design-lapse",
+      "category": "legacy_playbooks",
+      "contract": "playbook_contract"
+    },
+    {
+      "id": "design-segments",
+      "category": "legacy_playbooks",
+      "contract": "playbook_contract"
+    },
+    {
+      "id": "design-affinity",
+      "category": "legacy_playbooks",
+      "contract": "playbook_contract"
+    },
+    {
+      "id": "design-loyalty",
+      "category": "legacy_playbooks",
+      "contract": "playbook_contract"
+    },
+    {
+      "id": "design-returns",
+      "category": "legacy_playbooks",
+      "contract": "playbook_contract"
+    },
+    {
+      "id": "design-velocity",
+      "category": "legacy_playbooks",
+      "contract": "playbook_contract"
+    },
+    {
+      "id": "design-inventory",
+      "category": "legacy_playbooks",
+      "contract": "playbook_contract"
+    },
+    {
+      "id": "design-fulfillment",
+      "category": "legacy_playbooks",
+      "contract": "playbook_contract"
+    },
+    {
+      "id": "metric-sales",
+      "category": "metrics",
+      "contract": "scope"
+    },
+    {
+      "id": "metric-aov",
+      "category": "metrics",
+      "contract": "scope"
+    },
+    {
+      "id": "metric-returns",
+      "category": "metrics",
+      "contract": "scope"
+    },
+    {
+      "id": "metric-return_rate",
+      "category": "metrics",
+      "contract": "scope"
+    },
+    {
+      "id": "metric-margin",
+      "category": "metrics",
+      "contract": "scope"
+    },
+    {
+      "id": "metric-quantity",
+      "category": "metrics",
+      "contract": "scope"
+    },
+    {
+      "id": "basis-original_sales",
+      "category": "return_basis",
+      "contract": "scope"
+    },
+    {
+      "id": "basis-cohort",
+      "category": "return_basis",
+      "contract": "scope"
+    },
+    {
+      "id": "basis-calendar",
+      "category": "return_basis",
+      "contract": "scope"
+    },
+    {
+      "id": "channel-app",
+      "category": "entity_resolution",
+      "contract": "scope"
+    },
+    {
+      "id": "channel-website",
+      "category": "entity_resolution",
+      "contract": "scope"
+    },
+    {
+      "id": "channel-pos",
+      "category": "entity_resolution",
+      "contract": "scope"
+    },
+    {
+      "id": "reject-unknown-metric",
+      "category": "adverse_scope",
+      "contract": "scope"
+    },
+    {
+      "id": "reject-unknown-filter",
+      "category": "adverse_scope",
+      "contract": "scope"
+    },
+    {
+      "id": "reject-unknown-channel",
+      "category": "adverse_scope",
+      "contract": "scope"
+    },
+    {
+      "id": "reject-unknown-basis",
+      "category": "adverse_scope",
+      "contract": "scope"
+    },
+    {
+      "id": "reject-half-period",
+      "category": "adverse_scope",
+      "contract": "scope"
+    },
+    {
+      "id": "reject-outside-sales",
+      "category": "adverse_scope",
+      "contract": "scope"
+    },
+    {
+      "id": "reject-reversed-period",
+      "category": "adverse_scope",
+      "contract": "scope"
+    },
+    {
+      "id": "reject-negative-key",
+      "category": "adverse_scope",
+      "contract": "scope"
+    },
+    {
+      "id": "reject-invalid-boolean",
+      "category": "adverse_scope",
+      "contract": "scope"
+    },
+    {
+      "id": "reject-unknown-property",
+      "category": "adverse_scope",
+      "contract": "scope"
+    },
+    {
+      "id": "correction-clear",
+      "category": "multi_turn",
+      "contract": "scope"
+    },
+    {
+      "id": "correction-date",
+      "category": "multi_turn",
+      "contract": "scope"
+    },
+    {
+      "id": "correction-channel",
+      "category": "multi_turn",
+      "contract": "scope"
+    },
+    {
+      "id": "retrieval-aov",
+      "category": "retrieval",
+      "contract": "retrieval"
+    },
+    {
+      "id": "retrieval-causal-promo",
+      "category": "retrieval",
+      "contract": "retrieval"
+    },
+    {
+      "id": "retrieval-repeat",
+      "category": "retrieval",
+      "contract": "retrieval"
+    },
+    {
+      "id": "retrieval-return-tail",
+      "category": "retrieval",
+      "contract": "retrieval"
+    },
+    {
+      "id": "retrieval-schema-join",
+      "category": "retrieval",
+      "contract": "retrieval"
+    },
+    {
+      "id": "retrieval-pvm",
+      "category": "retrieval",
+      "contract": "retrieval"
+    },
+    {
+      "id": "retrieval-inventory",
+      "category": "retrieval",
+      "contract": "retrieval"
+    },
+    {
+      "id": "retrieval-example",
+      "category": "retrieval",
+      "contract": "retrieval"
+    },
+    {
+      "id": "sql-read",
+      "category": "query_safety",
+      "contract": "query"
+    },
+    {
+      "id": "sql-count-channels",
+      "category": "query_safety",
+      "contract": "query"
+    },
+    {
+      "id": "sql-sales-years",
+      "category": "query_safety",
+      "contract": "query"
+    },
+    {
+      "id": "sql-deny-delete",
+      "category": "query_safety",
+      "contract": "query"
+    },
+    {
+      "id": "sql-deny-multiple",
+      "category": "query_safety",
+      "contract": "query"
+    },
+    {
+      "id": "sql-deny-join",
+      "category": "query_safety",
+      "contract": "query"
+    },
+    {
+      "id": "sql-deny-header-fanout",
+      "category": "query_safety",
+      "contract": "query"
+    },
+    {
+      "id": "sql-deny-duplicate",
+      "category": "query_safety",
+      "contract": "query"
+    },
+    {
+      "id": "cite-valid",
+      "category": "evidence",
+      "contract": "citations"
+    },
+    {
+      "id": "cite-invalid",
+      "category": "evidence",
+      "contract": "citations"
+    },
+    {
+      "id": "cite-source",
+      "category": "evidence",
+      "contract": "citations"
+    },
+    {
+      "id": "format-cents",
+      "category": "response_quality",
+      "contract": "measured_values"
+    },
+    {
+      "id": "format-units",
+      "category": "response_quality",
+      "contract": "measured_values"
+    },
+    {
+      "id": "format-fabrication",
+      "category": "response_quality",
+      "contract": "measured_values"
+    },
+    {
+      "id": "compare-cells",
+      "category": "reconciliation",
+      "contract": "comparison"
+    },
+    {
+      "id": "compare-supplied",
+      "category": "reconciliation",
+      "contract": "comparison"
+    },
+    {
+      "id": "chart-bar",
+      "category": "visual_consistency",
+      "contract": "chart"
+    },
+    {
+      "id": "chart-bad-source",
+      "category": "visual_consistency",
+      "contract": "chart"
+    },
+    {
+      "id": "chart-unknown-column",
+      "category": "visual_consistency",
+      "contract": "chart"
+    },
+    {
+      "id": "chart-nonnumeric",
+      "category": "visual_consistency",
+      "contract": "chart"
+    },
+    {
+      "id": "chart-bad-kind",
+      "category": "visual_consistency",
+      "contract": "chart"
+    },
+    {
+      "id": "chart-units-mismatch",
+      "category": "visual_consistency",
+      "contract": "chart"
+    },
+    {
+      "id": "answer-structure",
+      "category": "response_quality",
+      "contract": "presentation"
+    },
+    {
+      "id": "answer-money",
+      "category": "response_quality",
+      "contract": "presentation"
+    }
+  ],
+  "review_status": "developer_authored; not a human-reviewed live benchmark"
+}

@@ -1,0 +1,9 @@
+{
+  "total": 287,
+  "passed": 287,
+  "failures": [],
+  "skipped": 0,
+  "run_at": "2026-09-26T16:56:46.486491+00:00",
+  "live_agent_tested": false,
+  "coverage": "Full warehouse recipes and hypotheses; independent metric reconciliations; API, persistence, cancellation and fault recovery; bounded SQL and model context; provenance and specialist reuse; evaluation grading. Model calls are mocked; browser interactions are not tested."
+}

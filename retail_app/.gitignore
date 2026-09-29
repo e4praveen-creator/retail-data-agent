@@ -1,0 +1,7 @@
+node_modules/
+state/*
+!state/.gitkeep
+.env
+__pycache__/
+*.pyc
+tmp/

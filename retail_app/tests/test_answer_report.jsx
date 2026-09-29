@@ -1,0 +1,24 @@
+import React from 'react';
+import { renderToString } from 'react-dom/server';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import { AnswerReport } from '../frontend/answer-report.jsx';
+const result=JSON.parse(fs.readFileSync(new URL('../tmp/structured-answer-fixture.json',import.meta.url),'utf8'));
+const renderText=text=><p>{text}</p>;
+const html=renderToString(<AnswerReport result={result} renderText={renderText}/>);
+const labels=['Headline','Scope and metric','Primary visual','Supporting values','Interpretation','Limitations','Next question'];
+let at=-1;
+for(const section of labels){const next=html.indexOf(`aria-label="${section}"`);assert(next>at,section);at=next;}
+assert(html.includes('eligible'));
+assert(html.includes('Evidence') || html.includes('E1'));
+assert(html.includes('Cohort Month'));
+const gap={outputs:[],presentation:{headline:'Cannot identify causal lift.',scope:'January 2025.',metric_basis:'Causal revenue.',interpretation:'No randomized comparison.',limitations:['No counterfactual.'],next_questions:['Which experiment is feasible?'],supporting_evidence_ids:[],visual_status:'no_measured_data'}};
+const empty=renderToString(<AnswerReport result={gap} renderText={renderText}/>);
+assert(empty.includes('No measured data supports a chart'));
+assert(!empty.includes('Measured totals'));
+const single={outputs:[{evidence_id:'E1',rows:[{sales_cents:12300}],name:'total',row_count:1}],presentation:{...gap.presentation,supporting_evidence_ids:['E1'],visual_status:'metric_cards'}};
+const one=renderToString(<AnswerReport result={single} renderText={renderText}/>);
+assert(one.includes('$123.00'));
+assert(one.includes('Measured totals'));
+assert(one.includes('12,300'));
+console.log('Answer design passed: seven-section order, visible evidence, measured total cards, and honest no-data visual state.');

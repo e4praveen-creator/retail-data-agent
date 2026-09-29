@@ -1,0 +1,27 @@
+.DS_Store
+.venv/
+.venv-runtime/
+**/node_modules/
+.pnpm-store/
+**/__pycache__/
+*.pyc
+.env
+.env.*
+!.env.example
+retail_data/data/
+retail_data_source.zip
+retail_app/state/*
+!retail_app/state/.gitkeep
+retail_app/tmp/
+sources/
+AGENTS.md
+
+# Local developer tools and editor state; deployable static assets stay tracked.
+**/.pytest_cache/
+**/.mypy_cache/
+**/.ruff_cache/
+**/.coverage
+**/.coverage.*
+**/htmlcov/
+**/*.egg-info/
+*.log

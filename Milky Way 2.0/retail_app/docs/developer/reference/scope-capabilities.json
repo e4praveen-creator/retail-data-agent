@@ -1,0 +1,640 @@
+{
+  "dimensions": [
+    "channel_name",
+    "channel_key",
+    "division_name",
+    "department_name",
+    "category_name",
+    "style_name",
+    "sku_code",
+    "sku_key",
+    "brand_name",
+    "color_name",
+    "size_label",
+    "price_tier",
+    "is_private_label",
+    "store_name",
+    "selling_store_key",
+    "region",
+    "market_store_name",
+    "market_store_key",
+    "market_region",
+    "customer_key",
+    "customer_segment",
+    "age_band",
+    "identified",
+    "loyalty_tier",
+    "loyalty_attached",
+    "promotion_name",
+    "promotion_key",
+    "promotion_applied",
+    "discounted",
+    "fulfillment_method",
+    "calendar_date",
+    "week_start",
+    "month",
+    "quarter",
+    "calendar_year",
+    "retail_year",
+    "retail_week",
+    "selling_price_bucket_usd",
+    "regular_price_bucket_usd"
+  ],
+  "measures": [
+    "aov_cents",
+    "avg_price_cents",
+    "cost_of_goods_cents",
+    "discount_cents",
+    "gross_sales_cents",
+    "identified_buyers",
+    "margin_before_returns_cents",
+    "margin_cents",
+    "margin_rate_pct",
+    "markdown_cents",
+    "merchandise_margin_cents",
+    "net_units",
+    "orders",
+    "promotion_discount_cents",
+    "recovered_cost_cents",
+    "refund_cents",
+    "return_rate_pct",
+    "returned_units",
+    "sales_after_returns_cents",
+    "sales_before_returns_cents",
+    "sales_cents",
+    "units"
+  ],
+  "filters": {
+    "channel_name": {
+      "type": "text",
+      "operators": [
+        "eq",
+        "ne",
+        "in",
+        "not_in"
+      ]
+    },
+    "channel_key": {
+      "type": "int",
+      "operators": [
+        "eq",
+        "ne",
+        "in",
+        "not_in",
+        "gt",
+        "gte",
+        "lt",
+        "lte",
+        "between"
+      ]
+    },
+    "division_name": {
+      "type": "text",
+      "operators": [
+        "eq",
+        "ne",
+        "in",
+        "not_in"
+      ]
+    },
+    "department_name": {
+      "type": "text",
+      "operators": [
+        "eq",
+        "ne",
+        "in",
+        "not_in"
+      ]
+    },
+    "category_name": {
+      "type": "text",
+      "operators": [
+        "eq",
+        "ne",
+        "in",
+        "not_in"
+      ]
+    },
+    "style_name": {
+      "type": "text",
+      "operators": [
+        "eq",
+        "ne",
+        "in",
+        "not_in"
+      ]
+    },
+    "sku_code": {
+      "type": "text",
+      "operators": [
+        "eq",
+        "ne",
+        "in",
+        "not_in"
+      ]
+    },
+    "sku_key": {
+      "type": "int",
+      "operators": [
+        "eq",
+        "ne",
+        "in",
+        "not_in",
+        "gt",
+        "gte",
+        "lt",
+        "lte",
+        "between"
+      ]
+    },
+    "brand_name": {
+      "type": "text",
+      "operators": [
+        "eq",
+        "ne",
+        "in",
+        "not_in"
+      ]
+    },
+    "color_name": {
+      "type": "text",
+      "operators": [
+        "eq",
+        "ne",
+        "in",
+        "not_in"
+      ]
+    },
+    "size_label": {
+      "type": "text",
+      "operators": [
+        "eq",
+        "ne",
+        "in",
+        "not_in"
+      ]
+    },
+    "price_tier": {
+      "type": "text",
+      "operators": [
+        "eq",
+        "ne",
+        "in",
+        "not_in"
+      ]
+    },
+    "is_private_label": {
+      "type": "bool",
+      "operators": [
+        "eq",
+        "ne",
+        "in",
+        "not_in"
+      ]
+    },
+    "store_name": {
+      "type": "text",
+      "operators": [
+        "eq",
+        "ne",
+        "in",
+        "not_in"
+      ]
+    },
+    "selling_store_key": {
+      "type": "int",
+      "operators": [
+        "eq",
+        "ne",
+        "in",
+        "not_in",
+        "gt",
+        "gte",
+        "lt",
+        "lte",
+        "between"
+      ]
+    },
+    "region": {
+      "type": "text",
+      "operators": [
+        "eq",
+        "ne",
+        "in",
+        "not_in"
+      ]
+    },
+    "market_store_name": {
+      "type": "text",
+      "operators": [
+        "eq",
+        "ne",
+        "in",
+        "not_in"
+      ]
+    },
+    "market_store_key": {
+      "type": "int",
+      "operators": [
+        "eq",
+        "ne",
+        "in",
+        "not_in",
+        "gt",
+        "gte",
+        "lt",
+        "lte",
+        "between"
+      ]
+    },
+    "market_region": {
+      "type": "text",
+      "operators": [
+        "eq",
+        "ne",
+        "in",
+        "not_in"
+      ]
+    },
+    "customer_key": {
+      "type": "int",
+      "operators": [
+        "eq",
+        "ne",
+        "in",
+        "not_in",
+        "gt",
+        "gte",
+        "lt",
+        "lte",
+        "between"
+      ]
+    },
+    "customer_segment": {
+      "type": "text",
+      "operators": [
+        "eq",
+        "ne",
+        "in",
+        "not_in"
+      ]
+    },
+    "age_band": {
+      "type": "text",
+      "operators": [
+        "eq",
+        "ne",
+        "in",
+        "not_in"
+      ]
+    },
+    "identified": {
+      "type": "bool",
+      "operators": [
+        "eq",
+        "ne",
+        "in",
+        "not_in"
+      ]
+    },
+    "loyalty_tier": {
+      "type": "text",
+      "operators": [
+        "eq",
+        "ne",
+        "in",
+        "not_in"
+      ]
+    },
+    "loyalty_attached": {
+      "type": "bool",
+      "operators": [
+        "eq",
+        "ne",
+        "in",
+        "not_in"
+      ]
+    },
+    "promotion_name": {
+      "type": "text",
+      "operators": [
+        "eq",
+        "ne",
+        "in",
+        "not_in"
+      ]
+    },
+    "promotion_key": {
+      "type": "int",
+      "operators": [
+        "eq",
+        "ne",
+        "in",
+        "not_in",
+        "gt",
+        "gte",
+        "lt",
+        "lte",
+        "between"
+      ]
+    },
+    "promotion_applied": {
+      "type": "bool",
+      "operators": [
+        "eq",
+        "ne",
+        "in",
+        "not_in"
+      ]
+    },
+    "discounted": {
+      "type": "bool",
+      "operators": [
+        "eq",
+        "ne",
+        "in",
+        "not_in"
+      ]
+    },
+    "fulfillment_method": {
+      "type": "text",
+      "operators": [
+        "eq",
+        "ne",
+        "in",
+        "not_in"
+      ]
+    },
+    "calendar_date": {
+      "type": "date",
+      "operators": [
+        "eq",
+        "ne",
+        "in",
+        "not_in",
+        "gt",
+        "gte",
+        "lt",
+        "lte",
+        "between"
+      ]
+    },
+    "week_start": {
+      "type": "date",
+      "operators": [
+        "eq",
+        "ne",
+        "in",
+        "not_in",
+        "gt",
+        "gte",
+        "lt",
+        "lte",
+        "between"
+      ]
+    },
+    "month": {
+      "type": "date",
+      "operators": [
+        "eq",
+        "ne",
+        "in",
+        "not_in",
+        "gt",
+        "gte",
+        "lt",
+        "lte",
+        "between"
+      ]
+    },
+    "quarter": {
+      "type": "date",
+      "operators": [
+        "eq",
+        "ne",
+        "in",
+        "not_in",
+        "gt",
+        "gte",
+        "lt",
+        "lte",
+        "between"
+      ]
+    },
+    "calendar_year": {
+      "type": "int",
+      "operators": [
+        "eq",
+        "ne",
+        "in",
+        "not_in",
+        "gt",
+        "gte",
+        "lt",
+        "lte",
+        "between"
+      ]
+    },
+    "retail_year": {
+      "type": "int",
+      "operators": [
+        "eq",
+        "ne",
+        "in",
+        "not_in",
+        "gt",
+        "gte",
+        "lt",
+        "lte",
+        "between"
+      ]
+    },
+    "retail_week": {
+      "type": "int",
+      "operators": [
+        "eq",
+        "ne",
+        "in",
+        "not_in",
+        "gt",
+        "gte",
+        "lt",
+        "lte",
+        "between"
+      ]
+    },
+    "selling_price_bucket_usd": {
+      "type": "int",
+      "operators": [
+        "eq",
+        "ne",
+        "in",
+        "not_in",
+        "gt",
+        "gte",
+        "lt",
+        "lte",
+        "between"
+      ]
+    },
+    "regular_price_bucket_usd": {
+      "type": "int",
+      "operators": [
+        "eq",
+        "ne",
+        "in",
+        "not_in",
+        "gt",
+        "gte",
+        "lt",
+        "lte",
+        "between"
+      ]
+    }
+  },
+  "return_bases": {
+    "before_returns": "Sales and generic margin before linked returns.",
+    "sales_cohort": "Sales and generic margin after all linked returns observed through 2026-03-01, grouped on original sale date.",
+    "return_date": "Requires explicit event-grain SQL; query_retail refuses this basis."
+  },
+  "aliases": {
+    "channel": "channel_name",
+    "division": "division_name",
+    "department": "department_name",
+    "category": "category_name",
+    "style": "style_name",
+    "sku": "sku_code",
+    "brand": "brand_name",
+    "color": "color_name",
+    "size": "size_label",
+    "store": "store_name",
+    "selling_store": "store_name",
+    "market_store": "market_store_name",
+    "customer": "customer_key",
+    "segment": "customer_segment",
+    "loyalty": "loyalty_attached",
+    "member": "loyalty_attached",
+    "promotion": "promotion_name",
+    "promoted": "promotion_applied",
+    "fulfillment": "fulfillment_method",
+    "day": "calendar_date",
+    "calendar_month": "month",
+    "calendar_week": "week_start",
+    "week": "week_start",
+    "year": "calendar_year",
+    "private_label": "is_private_label"
+  },
+  "measure_aliases": {
+    "sales": "sales_cents",
+    "net_sales": "sales_cents",
+    "revenue": "sales_cents",
+    "net_sales_cents": "sales_cents",
+    "sold_units": "units",
+    "quantity": "units",
+    "customers": "identified_buyers",
+    "buyers": "identified_buyers",
+    "avg_price": "avg_price_cents",
+    "average_price": "avg_price_cents",
+    "aov": "aov_cents",
+    "margin": "margin_cents",
+    "merchandise_margin": "merchandise_margin_cents",
+    "returns": "returned_units",
+    "return_rate": "return_rate_pct",
+    "refunds": "refund_cents",
+    "refund_net_cents": "refund_cents",
+    "discount": "discount_cents",
+    "gross_sales": "gross_sales_cents"
+  },
+  "scoped_playbooks": [
+    "trend",
+    "growth",
+    "margin",
+    "scorecard",
+    "concentration"
+  ],
+  "scoped_sql": {
+    "relation": "scoped_sales",
+    "columns": {
+      "sales_line_key": "BIGINT",
+      "transaction_key": "BIGINT",
+      "line_number": "INTEGER",
+      "date_key": "INTEGER",
+      "sku_key": "INTEGER",
+      "price_key": "INTEGER",
+      "promotion_key": "INTEGER",
+      "fulfillment_location_key": "INTEGER",
+      "quantity": "INTEGER",
+      "regular_unit_price_cents": "BIGINT",
+      "selling_unit_price_cents": "BIGINT",
+      "unit_cost_cents": "BIGINT",
+      "gross_sales_cents": "BIGINT",
+      "markdown_cents": "BIGINT",
+      "promotion_discount_cents": "BIGINT",
+      "net_sales_cents": "BIGINT",
+      "tax_cents": "BIGINT",
+      "cost_of_goods_cents": "BIGINT",
+      "promised_delivery_date": "DATE",
+      "calendar_date": "DATE",
+      "calendar_year": "INTEGER",
+      "calendar_month": "INTEGER",
+      "retail_year": "INTEGER",
+      "retail_week": "INTEGER",
+      "retail_period": "INTEGER",
+      "channel_key": "INTEGER",
+      "customer_key": "INTEGER",
+      "loyalty_key": "INTEGER",
+      "selling_store_key": "INTEGER",
+      "market_store_key": "INTEGER",
+      "fulfillment_method_key": "INTEGER",
+      "style_key": "INTEGER",
+      "style_name": "VARCHAR",
+      "brand_name": "VARCHAR",
+      "category_name": "VARCHAR",
+      "department_name": "VARCHAR",
+      "division_name": "VARCHAR",
+      "returned_units": "BIGINT",
+      "refund_net_cents": "BIGINT",
+      "realized_net_sales_cents": "BIGINT",
+      "net_cost_of_goods_cents": "BIGINT",
+      "merchandise_margin_cents": "BIGINT",
+      "channel_name": "VARCHAR",
+      "sku_code": "VARCHAR",
+      "color_name": "VARCHAR",
+      "size_label": "VARCHAR",
+      "price_tier": "VARCHAR",
+      "is_private_label": "BOOLEAN",
+      "store_name": "VARCHAR",
+      "region": "VARCHAR",
+      "market_store_name": "VARCHAR",
+      "market_region": "VARCHAR",
+      "customer_segment": "VARCHAR",
+      "age_band": "VARCHAR",
+      "identified": "BOOLEAN",
+      "loyalty_tier": "VARCHAR",
+      "loyalty_attached": "BOOLEAN",
+      "promotion_name": "VARCHAR",
+      "promotion_applied": "BOOLEAN",
+      "discounted": "BOOLEAN",
+      "fulfillment_method": "VARCHAR",
+      "week_start": "DATE",
+      "month": "DATE",
+      "quarter": "DATE",
+      "selling_price_bucket_usd": "BIGINT",
+      "regular_price_bucket_usd": "BIGINT",
+      "period": "VARCHAR"
+    },
+    "period_values": [
+      "current",
+      "comparison"
+    ],
+    "rules": "Use scoped_sales only, including within custom CTEs. Dates and filters are enforced. compare=true includes explicit comparison dates. Money is cents; quantity is sold units. Count orders/customer keys distinctly, excluding customer_key=0 for identified buyers. net_sales_cents is BEFORE returns; realized_net_sales_cents and merchandise_margin_cents are AFTER linked cohort returns."
+  },
+  "scope_patch_rules": "Filters upsert by field. filters=[] clears all. remove_filters removes selected fields. dimensions replaces grouping. Changed current dates clear stale comparison unless a new comparison is supplied. Dates can remain unset for explanations.",
+  "limitations": [
+    "AOV under a merchandise filter is selected merchandise value per matching order, not full-basket AOV.",
+    "Distinct orders and identified customers can overlap across product groups.",
+    "Region means selling-store region; use market_region for digital market attribution.",
+    "Customer segment is the dataset static descriptive label, not a recomputed behavioral segment.",
+    "query_scoped_sql enforces the active dates and filters through scoped_sales; metric formulas and joins still require review. Arbitrary unscoped SQL does not inherit that guarantee."
+  ]
+}

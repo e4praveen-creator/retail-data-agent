@@ -1,0 +1,398 @@
+[
+  {
+    "id": "rate-vs-volume",
+    "domain": "Sales",
+    "hypothesis": "Realized-rate changes account for more of Summit Field\u2019s matched-period sales movement than sold-unit volume.",
+    "test": "Run the exact SKU \u00d7 channel Shapley bridge and compare absolute rate, volume and mix contributions.",
+    "falsifier": "The rate contribution is smaller than volume or reverses the headline direction.",
+    "test_recipe": "pvm",
+    "required_tables": [
+      "fact_sales_line",
+      "fact_transaction",
+      "dim_date"
+    ],
+    "evidence": "fact_sales_line, fact_transaction, dim_date",
+    "scope": "All business; current versus comparison dates.",
+    "metric_basis": "Sales before returns; integer-cent reconciled bridge.",
+    "limitation": "The generator adds $3 to regular prices in 2025, but discounts and mix also affect realized rate. This is not price elasticity.",
+    "playbooks": [
+      "pvm"
+    ],
+    "status": "untested_template",
+    "provenance": "Summit Field METRICS.md, MODEL.md, executable playbooks and verified catalog; Milky Way deck is a workflow reference only."
+  },
+  {
+    "id": "q4-markdown",
+    "domain": "Pricing",
+    "hypothesis": "Summit Field\u2019s October\u2013December markdown share is higher than its other observed months.",
+    "test": "Aggregate markdown / effective regular merchandise sales by calendar month; compare Q4 only when both Q4 and other months are in scope.",
+    "falsifier": "Observed Q4 markdown share is not higher, or the selected dates lack a valid comparison.",
+    "test_recipe": "q4-markdown",
+    "required_tables": [
+      "fact_sales_line",
+      "fact_transaction",
+      "dim_date"
+    ],
+    "evidence": "fact_sales_line, fact_transaction, dim_date",
+    "scope": "Selected sale dates, monthly, all divisions and channels.",
+    "metric_basis": "Markdown cents / gross sales cents.",
+    "limitation": "Q4 10% unit markdown is a documented construction rule; rounding and product weighting affect the observed ratio.",
+    "playbooks": [
+      "q4-markdown"
+    ],
+    "status": "untested_template",
+    "provenance": "Summit Field METRICS.md, MODEL.md, executable playbooks and verified catalog; Milky Way deck is a workflow reference only."
+  },
+  {
+    "id": "app-price-book",
+    "domain": "Pricing",
+    "hypothesis": "The App price book is lower than Web and POS for the same SKU/quarter universe in the selected interval.",
+    "test": "Compare overlapping price intervals across all channels; the generated assortment covers the same SKU/quarter cells. Inspect counts before comparing.",
+    "falsifier": "The price-book averages are equal/higher for App or the SKU/quarter universes differ.",
+    "test_recipe": "app-price-book",
+    "required_tables": [
+      "fact_price_history",
+      "dim_channel"
+    ],
+    "evidence": "fact_price_history, dim_channel",
+    "scope": "Price intervals overlapping the selected dates; unweighted price-book comparison.",
+    "metric_basis": "Effective regular price per SKU/channel/quarter, before markdown or promotion.",
+    "limitation": "The generator sets App $1 below other channels. This tests the price book, not the observed basket ASP or customer response.",
+    "playbooks": [
+      "app-price-book"
+    ],
+    "status": "untested_template",
+    "provenance": "Summit Field METRICS.md, MODEL.md, executable playbooks and verified catalog; Milky Way deck is a workflow reference only."
+  },
+  {
+    "id": "digital-softgoods-returns",
+    "domain": "Returns",
+    "hypothesis": "Web and App Apparel/Footwear sales have higher observed unit return rates than Store POS in the same sale cohorts.",
+    "test": "Compare returned units / original sold units separately for Apparel and Footwear by channel.",
+    "falsifier": "Digital unit return rates are no higher than POS or a base is too small to compare.",
+    "test_recipe": "digital-softgoods-returns",
+    "required_tables": [
+      "fact_sales_line",
+      "fact_return_line",
+      "fact_transaction",
+      "dim_channel"
+    ],
+    "evidence": "fact_sales_line, fact_return_line, fact_transaction, dim_channel",
+    "scope": "Apparel and Footwear; selected original sale dates; all linked returns.",
+    "metric_basis": "Unit return rate on fully observed 60-day sales cohorts.",
+    "limitation": "The generator uses 17% digital versus 9% POS line return probability. One returned unit per selected line means unit return rates need not equal those probabilities.",
+    "playbooks": [
+      "digital-softgoods-returns"
+    ],
+    "status": "untested_template",
+    "provenance": "Summit Field METRICS.md, MODEL.md, executable playbooks and verified catalog; Milky Way deck is a workflow reference only."
+  },
+  {
+    "id": "damaged-recovery",
+    "domain": "Margin",
+    "hypothesis": "Damaged returns reduce merchandise margin more per returned unit because they recover no product cost.",
+    "test": "Compare recovered_cost_cents by return reason on selected original sales cohorts; inspect actual reason labels.",
+    "falsifier": "Damaged return rows recover cost, or no damaged returns are observed in scope.",
+    "test_recipe": "damaged-recovery",
+    "required_tables": [
+      "fact_return_line",
+      "fact_sales_line",
+      "dim_return_reason",
+      "dim_date"
+    ],
+    "evidence": "fact_return_line, fact_sales_line, dim_return_reason, dim_date",
+    "scope": "Returns linked to selected original sales; all observed return dates.",
+    "metric_basis": "Refunded merchandise and recovered cost, positive stored cents.",
+    "limitation": "Non-damaged returns are restockable by construction. This excludes processing, shipping and labor costs.",
+    "playbooks": [
+      "damaged-recovery"
+    ],
+    "status": "untested_template",
+    "provenance": "Summit Field METRICS.md, MODEL.md, executable playbooks and verified catalog; Milky Way deck is a workflow reference only."
+  },
+  {
+    "id": "margin-refunds",
+    "domain": "Margin",
+    "hypothesis": "Returned merchandise and recovered COGS explain a material difference between original sales growth and cohort merchandise-margin growth.",
+    "test": "Reconcile original net sales \u2212 refunds \u2212 original COGS + recovered COGS in both periods.",
+    "falsifier": "Return-related component deltas are immaterial and the gap is explained by other accounting components.",
+    "test_recipe": "margin",
+    "required_tables": [
+      "fact_sales_line",
+      "fact_return_line"
+    ],
+    "evidence": "fact_sales_line, fact_return_line",
+    "scope": "All divisions; matched original sale cohorts.",
+    "metric_basis": "Cohort merchandise margin after all observed returns.",
+    "limitation": "Accounting attribution does not identify causes of returns or measure operating profit.",
+    "playbooks": [
+      "margin"
+    ],
+    "status": "untested_template",
+    "provenance": "Summit Field METRICS.md, MODEL.md, executable playbooks and verified catalog; Milky Way deck is a workflow reference only."
+  },
+  {
+    "id": "anonymous-orders",
+    "domain": "Customers",
+    "hypothesis": "Pooling customer_key 0 as a real buyer would distort Summit Field\u2019s repeat and customer-reach analysis.",
+    "test": "Measure anonymous versus identified orders and sales; confirm distinct identified buyers exclude 0.",
+    "falsifier": "No anonymous orders are present in scope.",
+    "test_recipe": "anonymous-orders",
+    "required_tables": [
+      "fact_transaction",
+      "dim_date"
+    ],
+    "evidence": "fact_transaction, dim_date",
+    "scope": "Completed orders in selected dates.",
+    "metric_basis": "Order/sales coverage by identity; anonymous key 0 excluded from buyer counts.",
+    "limitation": "The generator targets 28% anonymous orders. It is not legitimate to infer anonymous-customer loyalty or repeat behavior.",
+    "playbooks": [
+      "anonymous-orders"
+    ],
+    "status": "untested_template",
+    "provenance": "Summit Field METRICS.md, MODEL.md, executable playbooks and verified catalog; Milky Way deck is a workflow reference only."
+  },
+  {
+    "id": "loyalty-attachment",
+    "domain": "Loyalty",
+    "hypothesis": "Loyalty-attached orders have different observed AOV and unit baskets from unattached orders.",
+    "test": "Compare header-based sales / orders and units / orders for loyalty_key > 0 versus 0.",
+    "falsifier": "Differences in basket measures are immaterial under a stated business threshold.",
+    "test_recipe": "loyalty",
+    "required_tables": [
+      "fact_transaction",
+      "dim_date"
+    ],
+    "evidence": "fact_transaction, dim_date",
+    "scope": "Selected completed orders; loyalty attached versus not attached.",
+    "metric_basis": "AOV before returns; no header-to-line fan-out.",
+    "limitation": "Enrollment and attachment are synthetic selection rules. Differences do not measure the loyalty program\u2019s impact.",
+    "playbooks": [
+      "loyalty"
+    ],
+    "status": "untested_template",
+    "provenance": "Summit Field METRICS.md, MODEL.md, executable playbooks and verified catalog; Milky Way deck is a workflow reference only."
+  },
+  {
+    "id": "mature-repeat",
+    "domain": "Customers",
+    "hypothesis": "The newest first-observed purchase cohorts appear weaker if incomplete 90/180-day windows are treated as non-repeat.",
+    "test": "Inspect eligible_90 / eligible_180 and compare repeat only among customers with mature observation windows.",
+    "falsifier": "All compared cohorts are fully mature and the proposed maturity artifact cannot explain the difference.",
+    "test_recipe": "cohorts",
+    "required_tables": [
+      "fact_transaction",
+      "dim_date"
+    ],
+    "evidence": "fact_transaction, dim_date",
+    "scope": "Identified buyers; first observed purchase in selected dates; history through selected end.",
+    "metric_basis": "Repeat on a later date within 90/180 days; mature eligible denominator.",
+    "limitation": "History is left-censored at 2024-01-01. First observed is not proven acquisition, and same-day repeat orders are excluded by the existing recipe.",
+    "playbooks": [
+      "cohorts"
+    ],
+    "status": "untested_template",
+    "provenance": "Summit Field METRICS.md, MODEL.md, executable playbooks and verified catalog; Milky Way deck is a workflow reference only."
+  },
+  {
+    "id": "seasonal-divisions",
+    "domain": "Merchandise",
+    "hypothesis": "Outdoor unit share rises in June/July, Footwear in August/September, and Apparel in November\u2013January within the observed calendar.",
+    "test": "Compare monthly division-unit shares, using all-division monthly units as the denominator; inspect both years when available.",
+    "falsifier": "The expected division-share pattern is absent or dates do not cover the relevant and adjacent months.",
+    "test_recipe": "seasonal-divisions",
+    "required_tables": [
+      "fact_sales_line",
+      "fact_transaction",
+      "dim_date"
+    ],
+    "evidence": "fact_sales_line, fact_transaction, dim_date",
+    "scope": "Selected sale dates; monthly division groups.",
+    "metric_basis": "Original sold units and sales before returns.",
+    "limitation": "These are explicit seasonal preferences in the generator, not newly discovered real-world consumer preferences.",
+    "playbooks": [
+      "seasonal-divisions"
+    ],
+    "status": "untested_template",
+    "provenance": "Summit Field METRICS.md, MODEL.md, executable playbooks and verified catalog; Milky Way deck is a workflow reference only."
+  },
+  {
+    "id": "private-label-mix",
+    "domain": "Merchandise",
+    "hypothesis": "The private-label group has different cohort margin and unit-return rates from other brands.",
+    "test": "Classify using v_product.is_private_label; calculate margin / cohort realized sales and returned / original units.",
+    "falsifier": "Differences are negligible or attributable entirely to division/product composition in follow-up tests.",
+    "test_recipe": "private-label-mix",
+    "required_tables": [
+      "fact_sales_line",
+      "fact_return_line",
+      "dim_brand",
+      "dim_style",
+      "dim_sku"
+    ],
+    "evidence": "fact_sales_line, fact_return_line, dim_brand, dim_style, dim_sku",
+    "scope": "Selected sale cohorts, all channels, private-label flag rather than a guessed brand name.",
+    "metric_basis": "Cohort realized revenue, merchandise margin, original and returned units.",
+    "limitation": "Brand assignment is synthetic. Group comparisons mix product composition and do not measure brand preference.",
+    "playbooks": [
+      "private-label-mix"
+    ],
+    "status": "untested_template",
+    "provenance": "Summit Field METRICS.md, MODEL.md, executable playbooks and verified catalog; Milky Way deck is a workflow reference only."
+  },
+  {
+    "id": "campaign-eligibility",
+    "domain": "Promotions",
+    "hypothesis": "Loyalty-only and channel-restricted campaigns produce different redeemed sales and discount exposure across POS, Web and App.",
+    "test": "Measure redeemed lines, units, net sales and promotion discount by loyalty_only and actual order channel.",
+    "falsifier": "No material exposure difference is present, or the scope lacks both campaign types.",
+    "test_recipe": "promotion-eligibility",
+    "required_tables": [
+      "dim_promotion",
+      "fact_sales_line",
+      "fact_transaction",
+      "dim_channel"
+    ],
+    "evidence": "dim_promotion, fact_sales_line, fact_transaction, dim_channel",
+    "scope": "Redeemed sale lines with promotion_key > 0 in selected dates.",
+    "metric_basis": "Promotion-associated merchandise sales before returns.",
+    "limitation": "Campaign eligibility, timing on days 10\u201324, and 60% eligible redemption are generator rules. No randomized holdout supports causal lift.",
+    "playbooks": [
+      "promotion-eligibility"
+    ],
+    "status": "untested_template",
+    "provenance": "Summit Field METRICS.md, MODEL.md, executable playbooks and verified catalog; Milky Way deck is a workflow reference only."
+  },
+  {
+    "id": "pos-digital-baskets",
+    "domain": "Channels",
+    "hypothesis": "POS, Web and App contribute differently to the sales movement because order counts and average baskets move differently.",
+    "test": "Compare matched header-based order totals, units and AOV by channel; reconcile sales to the overall headline.",
+    "falsifier": "Channel contributions and within-channel basket changes do not explain the measured movement.",
+    "test_recipe": "channels",
+    "required_tables": [
+      "fact_transaction",
+      "dim_channel",
+      "dim_store",
+      "dim_date"
+    ],
+    "evidence": "fact_transaction, dim_channel, dim_store, dim_date",
+    "scope": "Matched sale periods; digital selling_store_key 0 kept separate from POS stores.",
+    "metric_basis": "Header net merchandise sales and AOV before returns.",
+    "limitation": "The generator targets 66% POS, 23% Web, 11% App. Differences do not measure channel effectiveness.",
+    "playbooks": [
+      "channels"
+    ],
+    "status": "untested_template",
+    "provenance": "Summit Field METRICS.md, MODEL.md, executable playbooks and verified catalog; Milky Way deck is a workflow reference only."
+  },
+  {
+    "id": "weekend-demand-weight",
+    "domain": "Calendar",
+    "hypothesis": "Completed orders per observed day are higher on weekends than weekdays in Summit Field.",
+    "test": "Compare order count divided by observed calendar-day count, split by dim_date.is_weekend.",
+    "falsifier": "Weekend orders per observed day are no higher, or holiday/month composition explains the difference in a follow-up.",
+    "test_recipe": "weekend-concentration",
+    "required_tables": [
+      "fact_transaction",
+      "dim_date"
+    ],
+    "evidence": "fact_transaction, dim_date",
+    "scope": "Selected sale dates; weekend versus weekday.",
+    "metric_basis": "Completed orders per day; not foot traffic or conversion.",
+    "limitation": "The generator adds weekend sampling weight; control month composition for a like-for-like comparison.",
+    "playbooks": [
+      "weekend-concentration"
+    ],
+    "status": "untested_template",
+    "provenance": "Summit Field METRICS.md, MODEL.md, executable playbooks and verified catalog; Milky Way deck is a workflow reference only."
+  },
+  {
+    "id": "fulfillment-baskets",
+    "domain": "Fulfillment",
+    "hypothesis": "Pickup, DC shipping and ship-from-store orders have different basket sizes and observed return rates.",
+    "test": "Inspect order totals, original sales, sold units and linked returned units by fulfillment method; distinguish carry-out.",
+    "falsifier": "Observed differences are immaterial or disappear within channel/division strata.",
+    "test_recipe": "fulfillment",
+    "required_tables": [
+      "fact_transaction",
+      "fact_sales_line",
+      "fact_return_line",
+      "dim_fulfillment_method"
+    ],
+    "evidence": "fact_transaction, fact_sales_line, fact_return_line, dim_fulfillment_method",
+    "scope": "Selected completed sale cohorts; all observed returns.",
+    "metric_basis": "Original sales / orders for AOV; cohort returned units / original units.",
+    "limitation": "Only promise dates exist. This cannot test on-time delivery, delivery cost or causal retention effects.",
+    "playbooks": [
+      "fulfillment"
+    ],
+    "status": "untested_template",
+    "provenance": "Summit Field METRICS.md, MODEL.md, executable playbooks and verified catalog; Milky Way deck is a workflow reference only."
+  },
+  {
+    "id": "inventory-buffer",
+    "domain": "Inventory",
+    "hypothesis": "Some divisions carry more available inventory relative to observed SKU sales rates, despite all generated locations stocking every SKU.",
+    "test": "Compare latest completed available balances with selected-period units per week; inspect zero-sale SKUs separately.",
+    "falsifier": "Comparable weeks-of-supply differences are small or high stock is proportional to observed sales.",
+    "test_recipe": "velocity",
+    "required_tables": [
+      "fact_inventory_weekly",
+      "fact_sales_line",
+      "dim_sku"
+    ],
+    "evidence": "fact_inventory_weekly, fact_sales_line, dim_sku",
+    "scope": "SKU totals over all locations; latest completed snapshot on/before selected end.",
+    "metric_basis": "Available units / observed sales units per week; not a sum of weekly inventory balances.",
+    "limitation": "Receipts are generated to cover sales. The model has no daily stockout, unmet-demand or actual replenishment lead-time process.",
+    "playbooks": [
+      "velocity"
+    ],
+    "status": "untested_template",
+    "provenance": "Summit Field METRICS.md, MODEL.md, executable playbooks and verified catalog; Milky Way deck is a workflow reference only."
+  },
+  {
+    "id": "inventory-reconciliation",
+    "domain": "Inventory",
+    "hypothesis": "The latest inventory balance is explained by opening stock, receipts, sold units, restockable returns and shrink.",
+    "test": "Verify opening + receipts + restocks \u2212 sold \u2212 shrink = closing at the latest completed snapshot.",
+    "falsifier": "A nonzero reconciliation residual appears; investigate data or aggregation errors before interpreting performance.",
+    "test_recipe": "inventory",
+    "required_tables": [
+      "fact_inventory_weekly",
+      "dim_sku"
+    ],
+    "evidence": "fact_inventory_weekly, dim_sku",
+    "scope": "One latest completed Monday\u2013Sunday snapshot; division totals.",
+    "metric_basis": "Stock/flow reconciliation in units; available = closing \u2212 reserved.",
+    "limitation": "This is a data-integrity hypothesis. Passing does not prove optimized stocking or absence of intraday stockouts.",
+    "playbooks": [
+      "inventory"
+    ],
+    "status": "untested_template",
+    "provenance": "Summit Field METRICS.md, MODEL.md, executable playbooks and verified catalog; Milky Way deck is a workflow reference only."
+  },
+  {
+    "id": "division-contribution",
+    "domain": "Sales",
+    "hypothesis": "One of Apparel, Footwear, Team Sports, Outdoor, Golf or Fitness accounts for a disproportionate share of the matched-period sales change.",
+    "test": "Rank division dollar contributions by absolute size and reconcile their sum to the header-based total change.",
+    "falsifier": "Contributions are broadly distributed and no division is material under a declared threshold.",
+    "test_recipe": "growth",
+    "required_tables": [
+      "fact_sales_line",
+      "fact_transaction",
+      "dim_date"
+    ],
+    "evidence": "fact_sales_line, fact_transaction, dim_date",
+    "scope": "Six merchandise divisions, matched dates, all channels.",
+    "metric_basis": "Original merchandise sales before returns, current minus comparison.",
+    "limitation": "Divisions locate where change occurred. They are not independent causes and should not be added to overlapping channel/brand decompositions.",
+    "playbooks": [
+      "growth"
+    ],
+    "status": "untested_template",
+    "provenance": "Summit Field METRICS.md, MODEL.md, executable playbooks and verified catalog; Milky Way deck is a workflow reference only."
+  }
+]

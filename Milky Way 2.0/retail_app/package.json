@@ -1,0 +1,26 @@
+{
+  "name": "milky-way-retail-agent",
+  "private": true,
+  "version": "2.1.1",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test:frontend": "node scripts/test-frontend.mjs"
+  },
+  "dependencies": {
+    "lucide-react": "0.468.0",
+    "react": "19.1.1",
+    "react-dom": "19.1.1",
+    "react-markdown": "10.1.0",
+    "recharts": "2.15.4",
+    "remark-gfm": "4.0.1"
+  },
+  "devDependencies": {
+    "esbuild": "0.25.9",
+    "prettier": "3.6.2"
+  },
+  "packageManager": "pnpm@11.19.0",
+  "engines": {
+    "node": ">=24",
+    "pnpm": ">=11 <12"
+  }
+}
